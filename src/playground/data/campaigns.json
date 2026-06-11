@@ -1,0 +1,6563 @@
+{
+ "campaigns": [
+  {
+   "id": "cmp_demo_launch",
+   "name": "Product Demo Launch",
+   "channel": "meta",
+   "objective": "conversions",
+   "status": "active"
+  },
+  {
+   "id": "cmp_holiday",
+   "name": "Holiday Promo",
+   "channel": "google",
+   "objective": "sales",
+   "status": "active"
+  },
+  {
+   "id": "cmp_evergreen",
+   "name": "Evergreen Retargeting",
+   "channel": "meta",
+   "objective": "conversions",
+   "status": "active"
+  },
+  {
+   "id": "cmp_prospecting",
+   "name": "Prospecting Broad",
+   "channel": "tiktok",
+   "objective": "traffic",
+   "status": "active"
+  },
+  {
+   "id": "cmp_branded_search",
+   "name": "Branded Search",
+   "channel": "bing",
+   "objective": "sales",
+   "status": "active"
+  }
+ ],
+ "creatives": [
+  {
+   "id": "video_demo_v2",
+   "campaign_id": "cmp_demo_launch",
+   "creative_type": "video"
+  },
+  {
+   "id": "video_demo_v1",
+   "campaign_id": "cmp_demo_launch",
+   "creative_type": "video"
+  },
+  {
+   "id": "carousel_holiday",
+   "campaign_id": "cmp_holiday",
+   "creative_type": "carousel"
+  },
+  {
+   "id": "static_holiday_v1",
+   "campaign_id": "cmp_holiday",
+   "creative_type": "static"
+  },
+  {
+   "id": "static_v7",
+   "campaign_id": "cmp_evergreen",
+   "creative_type": "static"
+  },
+  {
+   "id": "static_v6",
+   "campaign_id": "cmp_evergreen",
+   "creative_type": "static"
+  },
+  {
+   "id": "video_hook_a",
+   "campaign_id": "cmp_prospecting",
+   "creative_type": "video"
+  },
+  {
+   "id": "rsa_brand_core",
+   "campaign_id": "cmp_branded_search",
+   "creative_type": "text"
+  }
+ ],
+ "daily": [
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 0,
+   "spend": 1440.0,
+   "revenue": 6912.0,
+   "impressions": 160000,
+   "clicks": 3360,
+   "conversions": 72.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 1,
+   "spend": 1560.0,
+   "revenue": 7488.0,
+   "impressions": 173333,
+   "clicks": 3639,
+   "conversions": 78.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 2,
+   "spend": 1680.0,
+   "revenue": 8064.0,
+   "impressions": 186666,
+   "clicks": 3919,
+   "conversions": 84.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 3,
+   "spend": 1800.0,
+   "revenue": 8640.0,
+   "impressions": 200000,
+   "clicks": 4200,
+   "conversions": 90.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 4,
+   "spend": 1920.0,
+   "revenue": 9216.0,
+   "impressions": 213333,
+   "clicks": 4479,
+   "conversions": 96.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 5,
+   "spend": 1800.0,
+   "revenue": 8640.0,
+   "impressions": 200000,
+   "clicks": 4200,
+   "conversions": 90.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 6,
+   "spend": 1800.0,
+   "revenue": 8640.0,
+   "impressions": 200000,
+   "clicks": 4200,
+   "conversions": 90.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 7,
+   "spend": 1697.04,
+   "revenue": 8871.74,
+   "impressions": 188560,
+   "clicks": 3959,
+   "conversions": 92.4
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 8,
+   "spend": 1838.46,
+   "revenue": 9611.06,
+   "impressions": 204273,
+   "clicks": 4289,
+   "conversions": 100.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 9,
+   "spend": 1979.88,
+   "revenue": 10350.37,
+   "impressions": 219986,
+   "clicks": 4619,
+   "conversions": 107.8
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 10,
+   "spend": 2121.3,
+   "revenue": 11089.69,
+   "impressions": 235700,
+   "clicks": 4949,
+   "conversions": 115.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 11,
+   "spend": 2262.72,
+   "revenue": 11829.0,
+   "impressions": 251413,
+   "clicks": 5279,
+   "conversions": 123.2
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 12,
+   "spend": 2121.3,
+   "revenue": 11089.69,
+   "impressions": 235700,
+   "clicks": 4949,
+   "conversions": 115.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 13,
+   "spend": 2121.3,
+   "revenue": 11089.69,
+   "impressions": 235700,
+   "clicks": 4949,
+   "conversions": 115.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 14,
+   "spend": 1373.79,
+   "revenue": 7127.19,
+   "impressions": 152643,
+   "clicks": 3205,
+   "conversions": 74.2
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 15,
+   "spend": 1488.24,
+   "revenue": 7721.13,
+   "impressions": 165360,
+   "clicks": 3472,
+   "conversions": 80.4
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 16,
+   "spend": 1602.72,
+   "revenue": 8315.06,
+   "impressions": 178080,
+   "clicks": 3739,
+   "conversions": 86.6
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 17,
+   "spend": 1717.2,
+   "revenue": 8908.99,
+   "impressions": 190800,
+   "clicks": 4006,
+   "conversions": 92.8
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 18,
+   "spend": 1831.68,
+   "revenue": 9502.93,
+   "impressions": 203520,
+   "clicks": 4273,
+   "conversions": 99.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 19,
+   "spend": 1717.2,
+   "revenue": 8908.99,
+   "impressions": 190800,
+   "clicks": 4006,
+   "conversions": 92.8
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 20,
+   "spend": 1717.2,
+   "revenue": 8908.99,
+   "impressions": 190800,
+   "clicks": 4006,
+   "conversions": 92.8
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 21,
+   "spend": 1200.02,
+   "revenue": 5669.3,
+   "impressions": 133335,
+   "clicks": 2800,
+   "conversions": 59.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 22,
+   "spend": 1300.03,
+   "revenue": 6141.71,
+   "impressions": 144447,
+   "clicks": 3033,
+   "conversions": 64.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 23,
+   "spend": 1400.03,
+   "revenue": 6614.15,
+   "impressions": 155558,
+   "clicks": 3266,
+   "conversions": 68.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 24,
+   "spend": 1500.04,
+   "revenue": 7086.59,
+   "impressions": 166671,
+   "clicks": 3500,
+   "conversions": 73.8
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 25,
+   "spend": 1600.04,
+   "revenue": 7559.03,
+   "impressions": 177782,
+   "clicks": 3733,
+   "conversions": 78.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 26,
+   "spend": 1500.04,
+   "revenue": 7086.59,
+   "impressions": 166671,
+   "clicks": 3500,
+   "conversions": 73.8
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 27,
+   "spend": 1500.04,
+   "revenue": 7086.59,
+   "impressions": 166671,
+   "clicks": 3500,
+   "conversions": 73.8
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 28,
+   "spend": 1568.07,
+   "revenue": 6810.5,
+   "impressions": 174230,
+   "clicks": 3658,
+   "conversions": 70.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 29,
+   "spend": 1698.75,
+   "revenue": 7378.05,
+   "impressions": 188750,
+   "clicks": 3963,
+   "conversions": 76.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 30,
+   "spend": 1829.42,
+   "revenue": 7945.59,
+   "impressions": 203268,
+   "clicks": 4268,
+   "conversions": 82.8
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 31,
+   "spend": 1960.09,
+   "revenue": 8513.14,
+   "impressions": 217787,
+   "clicks": 4573,
+   "conversions": 88.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 32,
+   "spend": 2090.77,
+   "revenue": 9080.68,
+   "impressions": 232307,
+   "clicks": 4878,
+   "conversions": 94.6
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 33,
+   "spend": 1960.09,
+   "revenue": 8513.14,
+   "impressions": 217787,
+   "clicks": 4573,
+   "conversions": 88.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 34,
+   "spend": 1960.09,
+   "revenue": 8513.14,
+   "impressions": 217787,
+   "clicks": 4573,
+   "conversions": 88.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 35,
+   "spend": 1646.96,
+   "revenue": 7347.68,
+   "impressions": 182995,
+   "clicks": 3842,
+   "conversions": 76.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 36,
+   "spend": 1784.22,
+   "revenue": 7959.99,
+   "impressions": 198246,
+   "clicks": 4163,
+   "conversions": 82.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 37,
+   "spend": 1921.46,
+   "revenue": 8572.3,
+   "impressions": 213495,
+   "clicks": 4483,
+   "conversions": 89.3
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 38,
+   "spend": 2058.71,
+   "revenue": 9184.61,
+   "impressions": 228745,
+   "clicks": 4803,
+   "conversions": 95.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 39,
+   "spend": 2195.96,
+   "revenue": 9796.91,
+   "impressions": 243995,
+   "clicks": 5123,
+   "conversions": 102.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 40,
+   "spend": 2058.71,
+   "revenue": 9184.61,
+   "impressions": 228745,
+   "clicks": 4803,
+   "conversions": 95.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 41,
+   "spend": 2058.71,
+   "revenue": 9184.61,
+   "impressions": 228745,
+   "clicks": 4803,
+   "conversions": 95.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 42,
+   "spend": 1258.59,
+   "revenue": 6229.44,
+   "impressions": 139843,
+   "clicks": 2936,
+   "conversions": 64.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 43,
+   "spend": 1363.48,
+   "revenue": 6748.57,
+   "impressions": 151497,
+   "clicks": 3181,
+   "conversions": 70.3
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 44,
+   "spend": 1468.36,
+   "revenue": 7267.7,
+   "impressions": 163151,
+   "clicks": 3426,
+   "conversions": 75.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 45,
+   "spend": 1573.24,
+   "revenue": 7786.82,
+   "impressions": 174804,
+   "clicks": 3670,
+   "conversions": 81.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 46,
+   "spend": 1678.12,
+   "revenue": 8305.94,
+   "impressions": 186457,
+   "clicks": 3915,
+   "conversions": 86.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 47,
+   "spend": 1573.24,
+   "revenue": 7786.82,
+   "impressions": 174804,
+   "clicks": 3670,
+   "conversions": 81.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 48,
+   "spend": 1573.24,
+   "revenue": 7786.82,
+   "impressions": 174804,
+   "clicks": 3670,
+   "conversions": 81.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 49,
+   "spend": 1279.78,
+   "revenue": 6749.95,
+   "impressions": 142197,
+   "clicks": 2986,
+   "conversions": 70.3
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 50,
+   "spend": 1386.43,
+   "revenue": 7312.46,
+   "impressions": 154047,
+   "clicks": 3234,
+   "conversions": 76.2
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 51,
+   "spend": 1493.08,
+   "revenue": 7874.96,
+   "impressions": 165897,
+   "clicks": 3483,
+   "conversions": 82.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 52,
+   "spend": 1599.72,
+   "revenue": 8437.46,
+   "impressions": 177746,
+   "clicks": 3732,
+   "conversions": 87.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 53,
+   "spend": 1706.37,
+   "revenue": 8999.95,
+   "impressions": 189596,
+   "clicks": 3981,
+   "conversions": 93.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 54,
+   "spend": 1599.72,
+   "revenue": 8437.46,
+   "impressions": 177746,
+   "clicks": 3732,
+   "conversions": 87.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 55,
+   "spend": 1599.72,
+   "revenue": 8437.46,
+   "impressions": 177746,
+   "clicks": 3732,
+   "conversions": 87.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 56,
+   "spend": 1662.69,
+   "revenue": 8447.76,
+   "impressions": 184743,
+   "clicks": 3879,
+   "conversions": 88.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 57,
+   "spend": 1801.25,
+   "revenue": 9151.73,
+   "impressions": 200138,
+   "clicks": 4202,
+   "conversions": 95.3
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 58,
+   "spend": 1939.81,
+   "revenue": 9855.71,
+   "impressions": 215534,
+   "clicks": 4526,
+   "conversions": 102.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 59,
+   "spend": 2078.37,
+   "revenue": 10559.69,
+   "impressions": 230929,
+   "clicks": 4849,
+   "conversions": 110.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 60,
+   "spend": 2216.93,
+   "revenue": 11263.67,
+   "impressions": 246325,
+   "clicks": 5172,
+   "conversions": 117.3
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 61,
+   "spend": 2078.37,
+   "revenue": 10559.69,
+   "impressions": 230929,
+   "clicks": 4849,
+   "conversions": 110.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 62,
+   "spend": 2078.37,
+   "revenue": 10559.69,
+   "impressions": 230929,
+   "clicks": 4849,
+   "conversions": 110.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 63,
+   "spend": 1542.86,
+   "revenue": 7066.78,
+   "impressions": 171428,
+   "clicks": 3599,
+   "conversions": 73.6
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 64,
+   "spend": 1671.4,
+   "revenue": 7655.67,
+   "impressions": 185711,
+   "clicks": 3899,
+   "conversions": 79.7
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 65,
+   "spend": 1799.97,
+   "revenue": 8244.57,
+   "impressions": 199996,
+   "clicks": 4199,
+   "conversions": 85.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 66,
+   "spend": 1928.54,
+   "revenue": 8833.47,
+   "impressions": 214282,
+   "clicks": 4499,
+   "conversions": 92.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 67,
+   "spend": 2057.11,
+   "revenue": 9422.37,
+   "impressions": 228567,
+   "clicks": 4799,
+   "conversions": 98.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 68,
+   "spend": 1928.54,
+   "revenue": 8833.47,
+   "impressions": 214282,
+   "clicks": 4499,
+   "conversions": 92.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 69,
+   "spend": 1928.54,
+   "revenue": 8833.47,
+   "impressions": 214282,
+   "clicks": 4499,
+   "conversions": 92.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 70,
+   "spend": 1190.8,
+   "revenue": 5144.27,
+   "impressions": 132311,
+   "clicks": 2778,
+   "conversions": 53.6
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 71,
+   "spend": 1290.04,
+   "revenue": 5572.98,
+   "impressions": 143337,
+   "clicks": 3010,
+   "conversions": 58.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 72,
+   "spend": 1389.27,
+   "revenue": 6001.67,
+   "impressions": 154363,
+   "clicks": 3241,
+   "conversions": 62.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 73,
+   "spend": 1488.51,
+   "revenue": 6430.36,
+   "impressions": 165390,
+   "clicks": 3473,
+   "conversions": 67.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 74,
+   "spend": 1587.74,
+   "revenue": 6859.05,
+   "impressions": 176415,
+   "clicks": 3704,
+   "conversions": 71.4
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 75,
+   "spend": 1488.51,
+   "revenue": 6430.36,
+   "impressions": 165390,
+   "clicks": 3473,
+   "conversions": 67.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 76,
+   "spend": 1488.51,
+   "revenue": 6430.36,
+   "impressions": 165390,
+   "clicks": 3473,
+   "conversions": 67.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 77,
+   "spend": 1401.39,
+   "revenue": 6424.16,
+   "impressions": 155710,
+   "clicks": 3269,
+   "conversions": 66.9
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 78,
+   "spend": 1518.16,
+   "revenue": 6959.51,
+   "impressions": 168684,
+   "clicks": 3542,
+   "conversions": 72.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 79,
+   "spend": 1634.94,
+   "revenue": 7494.85,
+   "impressions": 181660,
+   "clicks": 3814,
+   "conversions": 78.1
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 80,
+   "spend": 1751.72,
+   "revenue": 8030.2,
+   "impressions": 194635,
+   "clicks": 4087,
+   "conversions": 83.6
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 81,
+   "spend": 1868.51,
+   "revenue": 8565.55,
+   "impressions": 207612,
+   "clicks": 4359,
+   "conversions": 89.2
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 82,
+   "spend": 1751.72,
+   "revenue": 8030.2,
+   "impressions": 194635,
+   "clicks": 4087,
+   "conversions": 83.6
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 83,
+   "spend": 1751.72,
+   "revenue": 8030.2,
+   "impressions": 194635,
+   "clicks": 4087,
+   "conversions": 83.6
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 84,
+   "spend": 1699.15,
+   "revenue": 8638.79,
+   "impressions": 188794,
+   "clicks": 3964,
+   "conversions": 90.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 85,
+   "spend": 1840.74,
+   "revenue": 9358.69,
+   "impressions": 204526,
+   "clicks": 4295,
+   "conversions": 97.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 86,
+   "spend": 1982.34,
+   "revenue": 10078.59,
+   "impressions": 220260,
+   "clicks": 4625,
+   "conversions": 105.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 87,
+   "spend": 2123.93,
+   "revenue": 10798.49,
+   "impressions": 235992,
+   "clicks": 4955,
+   "conversions": 112.5
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 88,
+   "spend": 2265.53,
+   "revenue": 11518.39,
+   "impressions": 251725,
+   "clicks": 5286,
+   "conversions": 120.0
+  },
+  {
+   "creative_id": "video_demo_v2",
+   "day_offset": 89,
+   "spend": 2123.93,
+   "revenue": 10798.49,
+   "impressions": 235992,
+   "clicks": 4955,
+   "conversions": 112.5
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 0,
+   "spend": 600.0,
+   "revenue": 1560.0,
+   "impressions": 63157,
+   "clicks": 1010,
+   "conversions": 17.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 1,
+   "spend": 650.0,
+   "revenue": 1690.0,
+   "impressions": 68421,
+   "clicks": 1094,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 2,
+   "spend": 700.0,
+   "revenue": 1820.0,
+   "impressions": 73684,
+   "clicks": 1178,
+   "conversions": 19.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 3,
+   "spend": 750.0,
+   "revenue": 1950.0,
+   "impressions": 78947,
+   "clicks": 1263,
+   "conversions": 21.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 4,
+   "spend": 800.0,
+   "revenue": 2080.0,
+   "impressions": 84210,
+   "clicks": 1347,
+   "conversions": 22.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 5,
+   "spend": 750.0,
+   "revenue": 1950.0,
+   "impressions": 78947,
+   "clicks": 1263,
+   "conversions": 21.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 6,
+   "spend": 750.0,
+   "revenue": 1950.0,
+   "impressions": 78947,
+   "clicks": 1263,
+   "conversions": 21.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 7,
+   "spend": 646.15,
+   "revenue": 1637.07,
+   "impressions": 68015,
+   "clicks": 1088,
+   "conversions": 17.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 8,
+   "spend": 700.0,
+   "revenue": 1773.5,
+   "impressions": 73684,
+   "clicks": 1178,
+   "conversions": 19.3
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 9,
+   "spend": 753.85,
+   "revenue": 1909.92,
+   "impressions": 79352,
+   "clicks": 1269,
+   "conversions": 20.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 10,
+   "spend": 807.7,
+   "revenue": 2046.35,
+   "impressions": 85021,
+   "clicks": 1360,
+   "conversions": 22.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 11,
+   "spend": 861.54,
+   "revenue": 2182.77,
+   "impressions": 90688,
+   "clicks": 1451,
+   "conversions": 23.7
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 12,
+   "spend": 807.7,
+   "revenue": 2046.35,
+   "impressions": 85021,
+   "clicks": 1360,
+   "conversions": 22.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 13,
+   "spend": 807.7,
+   "revenue": 2046.35,
+   "impressions": 85021,
+   "clicks": 1360,
+   "conversions": 22.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 14,
+   "spend": 497.24,
+   "revenue": 1166.41,
+   "impressions": 52341,
+   "clicks": 837,
+   "conversions": 12.7
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 15,
+   "spend": 538.66,
+   "revenue": 1263.62,
+   "impressions": 56701,
+   "clicks": 907,
+   "conversions": 13.7
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 16,
+   "spend": 580.1,
+   "revenue": 1360.82,
+   "impressions": 61063,
+   "clicks": 977,
+   "conversions": 14.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 17,
+   "spend": 621.53,
+   "revenue": 1458.02,
+   "impressions": 65424,
+   "clicks": 1046,
+   "conversions": 15.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 18,
+   "spend": 662.97,
+   "revenue": 1555.22,
+   "impressions": 69786,
+   "clicks": 1116,
+   "conversions": 16.9
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 19,
+   "spend": 621.53,
+   "revenue": 1458.02,
+   "impressions": 65424,
+   "clicks": 1046,
+   "conversions": 15.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 20,
+   "spend": 621.53,
+   "revenue": 1458.02,
+   "impressions": 65424,
+   "clicks": 1046,
+   "conversions": 15.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 21,
+   "spend": 580.31,
+   "revenue": 1413.6,
+   "impressions": 61085,
+   "clicks": 977,
+   "conversions": 15.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 22,
+   "spend": 628.69,
+   "revenue": 1531.4,
+   "impressions": 66177,
+   "clicks": 1058,
+   "conversions": 16.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 23,
+   "spend": 677.05,
+   "revenue": 1649.2,
+   "impressions": 71268,
+   "clicks": 1140,
+   "conversions": 17.9
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 24,
+   "spend": 725.41,
+   "revenue": 1767.0,
+   "impressions": 76358,
+   "clicks": 1221,
+   "conversions": 19.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 25,
+   "spend": 773.77,
+   "revenue": 1884.8,
+   "impressions": 81449,
+   "clicks": 1303,
+   "conversions": 20.5
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 26,
+   "spend": 725.41,
+   "revenue": 1767.0,
+   "impressions": 76358,
+   "clicks": 1221,
+   "conversions": 19.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 27,
+   "spend": 725.41,
+   "revenue": 1767.0,
+   "impressions": 76358,
+   "clicks": 1221,
+   "conversions": 19.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 28,
+   "spend": 707.85,
+   "revenue": 1914.91,
+   "impressions": 74510,
+   "clicks": 1192,
+   "conversions": 20.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 29,
+   "spend": 766.83,
+   "revenue": 2074.47,
+   "impressions": 80718,
+   "clicks": 1291,
+   "conversions": 22.5
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 30,
+   "spend": 825.82,
+   "revenue": 2234.05,
+   "impressions": 86928,
+   "clicks": 1390,
+   "conversions": 24.3
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 31,
+   "spend": 884.8,
+   "revenue": 2393.62,
+   "impressions": 93136,
+   "clicks": 1490,
+   "conversions": 26.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 32,
+   "spend": 943.79,
+   "revenue": 2553.2,
+   "impressions": 99346,
+   "clicks": 1589,
+   "conversions": 27.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 33,
+   "spend": 884.8,
+   "revenue": 2393.62,
+   "impressions": 93136,
+   "clicks": 1490,
+   "conversions": 26.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 34,
+   "spend": 884.8,
+   "revenue": 2393.62,
+   "impressions": 93136,
+   "clicks": 1490,
+   "conversions": 26.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 35,
+   "spend": 591.89,
+   "revenue": 1692.57,
+   "impressions": 62304,
+   "clicks": 996,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 36,
+   "spend": 641.21,
+   "revenue": 1833.61,
+   "impressions": 67495,
+   "clicks": 1079,
+   "conversions": 19.9
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 37,
+   "spend": 690.53,
+   "revenue": 1974.66,
+   "impressions": 72687,
+   "clicks": 1162,
+   "conversions": 21.5
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 38,
+   "spend": 739.85,
+   "revenue": 2115.7,
+   "impressions": 77878,
+   "clicks": 1246,
+   "conversions": 23.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 39,
+   "spend": 789.18,
+   "revenue": 2256.75,
+   "impressions": 83071,
+   "clicks": 1329,
+   "conversions": 24.5
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 40,
+   "spend": 739.85,
+   "revenue": 2115.7,
+   "impressions": 77878,
+   "clicks": 1246,
+   "conversions": 23.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 41,
+   "spend": 739.85,
+   "revenue": 2115.7,
+   "impressions": 77878,
+   "clicks": 1246,
+   "conversions": 23.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 42,
+   "spend": 494.25,
+   "revenue": 1349.42,
+   "impressions": 52026,
+   "clicks": 832,
+   "conversions": 14.7
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 43,
+   "spend": 535.44,
+   "revenue": 1461.88,
+   "impressions": 56362,
+   "clicks": 901,
+   "conversions": 15.9
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 44,
+   "spend": 576.62,
+   "revenue": 1574.34,
+   "impressions": 60696,
+   "clicks": 971,
+   "conversions": 17.1
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 45,
+   "spend": 617.81,
+   "revenue": 1686.79,
+   "impressions": 65032,
+   "clicks": 1040,
+   "conversions": 18.3
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 46,
+   "spend": 659.0,
+   "revenue": 1799.24,
+   "impressions": 69368,
+   "clicks": 1109,
+   "conversions": 19.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 47,
+   "spend": 617.81,
+   "revenue": 1686.79,
+   "impressions": 65032,
+   "clicks": 1040,
+   "conversions": 18.3
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 48,
+   "spend": 617.81,
+   "revenue": 1686.79,
+   "impressions": 65032,
+   "clicks": 1040,
+   "conversions": 18.3
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 49,
+   "spend": 635.37,
+   "revenue": 1562.07,
+   "impressions": 66881,
+   "clicks": 1070,
+   "conversions": 17.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 50,
+   "spend": 688.31,
+   "revenue": 1692.26,
+   "impressions": 72453,
+   "clicks": 1159,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 51,
+   "spend": 741.26,
+   "revenue": 1822.43,
+   "impressions": 78027,
+   "clicks": 1248,
+   "conversions": 19.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 52,
+   "spend": 794.21,
+   "revenue": 1952.61,
+   "impressions": 83601,
+   "clicks": 1337,
+   "conversions": 21.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 53,
+   "spend": 847.16,
+   "revenue": 2082.78,
+   "impressions": 89174,
+   "clicks": 1426,
+   "conversions": 22.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 54,
+   "spend": 794.21,
+   "revenue": 1952.61,
+   "impressions": 83601,
+   "clicks": 1337,
+   "conversions": 21.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 55,
+   "spend": 794.21,
+   "revenue": 1952.61,
+   "impressions": 83601,
+   "clicks": 1337,
+   "conversions": 21.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 56,
+   "spend": 696.63,
+   "revenue": 1631.12,
+   "impressions": 73329,
+   "clicks": 1173,
+   "conversions": 17.7
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 57,
+   "spend": 754.69,
+   "revenue": 1767.04,
+   "impressions": 79441,
+   "clicks": 1271,
+   "conversions": 19.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 58,
+   "spend": 812.74,
+   "revenue": 1902.97,
+   "impressions": 85551,
+   "clicks": 1368,
+   "conversions": 20.7
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 59,
+   "spend": 870.8,
+   "revenue": 2038.9,
+   "impressions": 91663,
+   "clicks": 1466,
+   "conversions": 22.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 60,
+   "spend": 928.85,
+   "revenue": 2174.82,
+   "impressions": 97773,
+   "clicks": 1564,
+   "conversions": 23.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 61,
+   "spend": 870.8,
+   "revenue": 2038.9,
+   "impressions": 91663,
+   "clicks": 1466,
+   "conversions": 22.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 62,
+   "spend": 870.8,
+   "revenue": 2038.9,
+   "impressions": 91663,
+   "clicks": 1466,
+   "conversions": 22.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 63,
+   "spend": 539.73,
+   "revenue": 1353.02,
+   "impressions": 56813,
+   "clicks": 909,
+   "conversions": 14.7
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 64,
+   "spend": 584.71,
+   "revenue": 1465.78,
+   "impressions": 61548,
+   "clicks": 984,
+   "conversions": 15.9
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 65,
+   "spend": 629.69,
+   "revenue": 1578.53,
+   "impressions": 66283,
+   "clicks": 1060,
+   "conversions": 17.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 66,
+   "spend": 674.66,
+   "revenue": 1691.29,
+   "impressions": 71016,
+   "clicks": 1136,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 67,
+   "spend": 719.64,
+   "revenue": 1804.04,
+   "impressions": 75751,
+   "clicks": 1212,
+   "conversions": 19.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 68,
+   "spend": 674.66,
+   "revenue": 1691.29,
+   "impressions": 71016,
+   "clicks": 1136,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 69,
+   "spend": 674.66,
+   "revenue": 1691.29,
+   "impressions": 71016,
+   "clicks": 1136,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 70,
+   "spend": 518.88,
+   "revenue": 1439.46,
+   "impressions": 54618,
+   "clicks": 873,
+   "conversions": 15.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 71,
+   "spend": 562.13,
+   "revenue": 1559.41,
+   "impressions": 59171,
+   "clicks": 946,
+   "conversions": 17.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 72,
+   "spend": 605.38,
+   "revenue": 1679.37,
+   "impressions": 63724,
+   "clicks": 1019,
+   "conversions": 18.3
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 73,
+   "spend": 648.62,
+   "revenue": 1799.32,
+   "impressions": 68275,
+   "clicks": 1092,
+   "conversions": 19.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 74,
+   "spend": 691.86,
+   "revenue": 1919.27,
+   "impressions": 72827,
+   "clicks": 1165,
+   "conversions": 20.9
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 75,
+   "spend": 648.62,
+   "revenue": 1799.32,
+   "impressions": 68275,
+   "clicks": 1092,
+   "conversions": 19.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 76,
+   "spend": 648.62,
+   "revenue": 1799.32,
+   "impressions": 68275,
+   "clicks": 1092,
+   "conversions": 19.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 77,
+   "spend": 681.18,
+   "revenue": 1942.07,
+   "impressions": 71703,
+   "clicks": 1147,
+   "conversions": 21.1
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 78,
+   "spend": 737.93,
+   "revenue": 2103.9,
+   "impressions": 77676,
+   "clicks": 1242,
+   "conversions": 22.9
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 79,
+   "spend": 794.7,
+   "revenue": 2265.74,
+   "impressions": 83652,
+   "clicks": 1338,
+   "conversions": 24.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 80,
+   "spend": 851.46,
+   "revenue": 2427.58,
+   "impressions": 89627,
+   "clicks": 1434,
+   "conversions": 26.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 81,
+   "spend": 908.23,
+   "revenue": 2589.42,
+   "impressions": 95603,
+   "clicks": 1529,
+   "conversions": 28.1
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 82,
+   "spend": 851.46,
+   "revenue": 2427.58,
+   "impressions": 89627,
+   "clicks": 1434,
+   "conversions": 26.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 83,
+   "spend": 851.46,
+   "revenue": 2427.58,
+   "impressions": 89627,
+   "clicks": 1434,
+   "conversions": 26.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 84,
+   "spend": 660.18,
+   "revenue": 1751.93,
+   "impressions": 69492,
+   "clicks": 1111,
+   "conversions": 19.0
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 85,
+   "spend": 715.21,
+   "revenue": 1897.93,
+   "impressions": 75285,
+   "clicks": 1204,
+   "conversions": 20.6
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 86,
+   "spend": 770.22,
+   "revenue": 2043.92,
+   "impressions": 81075,
+   "clicks": 1297,
+   "conversions": 22.2
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 87,
+   "spend": 825.24,
+   "revenue": 2189.92,
+   "impressions": 86867,
+   "clicks": 1389,
+   "conversions": 23.8
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 88,
+   "spend": 880.25,
+   "revenue": 2335.91,
+   "impressions": 92657,
+   "clicks": 1482,
+   "conversions": 25.4
+  },
+  {
+   "creative_id": "video_demo_v1",
+   "day_offset": 89,
+   "spend": 825.24,
+   "revenue": 2189.92,
+   "impressions": 86867,
+   "clicks": 1389,
+   "conversions": 23.8
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 0,
+   "spend": 960.0,
+   "revenue": 3744.0,
+   "impressions": 87272,
+   "clicks": 2094,
+   "conversions": 48.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 1,
+   "spend": 1040.0,
+   "revenue": 4056.0,
+   "impressions": 94545,
+   "clicks": 2269,
+   "conversions": 52.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 2,
+   "spend": 1120.0,
+   "revenue": 4368.0,
+   "impressions": 101818,
+   "clicks": 2443,
+   "conversions": 56.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 3,
+   "spend": 1200.0,
+   "revenue": 4680.0,
+   "impressions": 109090,
+   "clicks": 2618,
+   "conversions": 60.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 4,
+   "spend": 1280.0,
+   "revenue": 4992.0,
+   "impressions": 116363,
+   "clicks": 2792,
+   "conversions": 64.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 5,
+   "spend": 1200.0,
+   "revenue": 4680.0,
+   "impressions": 109090,
+   "clicks": 2618,
+   "conversions": 60.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 6,
+   "spend": 1200.0,
+   "revenue": 4680.0,
+   "impressions": 109090,
+   "clicks": 2618,
+   "conversions": 60.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 7,
+   "spend": 868.43,
+   "revenue": 3200.43,
+   "impressions": 78948,
+   "clicks": 1894,
+   "conversions": 41.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 8,
+   "spend": 940.81,
+   "revenue": 3467.12,
+   "impressions": 85528,
+   "clicks": 2052,
+   "conversions": 44.5
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 9,
+   "spend": 1013.19,
+   "revenue": 3733.82,
+   "impressions": 92108,
+   "clicks": 2210,
+   "conversions": 47.9
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 10,
+   "spend": 1085.56,
+   "revenue": 4000.52,
+   "impressions": 98687,
+   "clicks": 2368,
+   "conversions": 51.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 11,
+   "spend": 1157.93,
+   "revenue": 4267.23,
+   "impressions": 105266,
+   "clicks": 2526,
+   "conversions": 54.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 12,
+   "spend": 1085.56,
+   "revenue": 4000.52,
+   "impressions": 98687,
+   "clicks": 2368,
+   "conversions": 51.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 13,
+   "spend": 1085.56,
+   "revenue": 4000.52,
+   "impressions": 98687,
+   "clicks": 2368,
+   "conversions": 51.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 14,
+   "spend": 826.47,
+   "revenue": 3382.48,
+   "impressions": 75133,
+   "clicks": 1803,
+   "conversions": 43.4
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 15,
+   "spend": 895.34,
+   "revenue": 3664.36,
+   "impressions": 81394,
+   "clicks": 1953,
+   "conversions": 47.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 16,
+   "spend": 964.21,
+   "revenue": 3946.23,
+   "impressions": 87655,
+   "clicks": 2103,
+   "conversions": 50.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 17,
+   "spend": 1033.08,
+   "revenue": 4228.1,
+   "impressions": 93916,
+   "clicks": 2253,
+   "conversions": 54.2
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 18,
+   "spend": 1101.96,
+   "revenue": 4509.98,
+   "impressions": 100178,
+   "clicks": 2404,
+   "conversions": 57.8
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 19,
+   "spend": 1033.08,
+   "revenue": 4228.1,
+   "impressions": 93916,
+   "clicks": 2253,
+   "conversions": 54.2
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 20,
+   "spend": 1033.08,
+   "revenue": 4228.1,
+   "impressions": 93916,
+   "clicks": 2253,
+   "conversions": 54.2
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 21,
+   "spend": 1085.97,
+   "revenue": 4658.34,
+   "impressions": 98724,
+   "clicks": 2369,
+   "conversions": 59.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 22,
+   "spend": 1176.46,
+   "revenue": 5046.54,
+   "impressions": 106950,
+   "clicks": 2566,
+   "conversions": 64.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 23,
+   "spend": 1266.96,
+   "revenue": 5434.74,
+   "impressions": 115178,
+   "clicks": 2764,
+   "conversions": 69.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 24,
+   "spend": 1357.46,
+   "revenue": 5822.93,
+   "impressions": 123405,
+   "clicks": 2961,
+   "conversions": 74.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 25,
+   "spend": 1447.95,
+   "revenue": 6211.13,
+   "impressions": 131631,
+   "clicks": 3159,
+   "conversions": 79.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 26,
+   "spend": 1357.46,
+   "revenue": 5822.93,
+   "impressions": 123405,
+   "clicks": 2961,
+   "conversions": 74.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 27,
+   "spend": 1357.46,
+   "revenue": 5822.93,
+   "impressions": 123405,
+   "clicks": 2961,
+   "conversions": 74.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 28,
+   "spend": 1061.08,
+   "revenue": 4308.74,
+   "impressions": 96461,
+   "clicks": 2315,
+   "conversions": 55.2
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 29,
+   "spend": 1149.5,
+   "revenue": 4667.79,
+   "impressions": 104500,
+   "clicks": 2508,
+   "conversions": 59.8
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 30,
+   "spend": 1237.92,
+   "revenue": 5026.85,
+   "impressions": 112538,
+   "clicks": 2700,
+   "conversions": 64.4
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 31,
+   "spend": 1326.34,
+   "revenue": 5385.91,
+   "impressions": 120576,
+   "clicks": 2893,
+   "conversions": 69.1
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 32,
+   "spend": 1414.76,
+   "revenue": 5744.97,
+   "impressions": 128614,
+   "clicks": 3086,
+   "conversions": 73.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 33,
+   "spend": 1326.34,
+   "revenue": 5385.91,
+   "impressions": 120576,
+   "clicks": 2893,
+   "conversions": 69.1
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 34,
+   "spend": 1326.34,
+   "revenue": 5385.91,
+   "impressions": 120576,
+   "clicks": 2893,
+   "conversions": 69.1
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 35,
+   "spend": 807.98,
+   "revenue": 2954.2,
+   "impressions": 73452,
+   "clicks": 1762,
+   "conversions": 37.9
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 36,
+   "spend": 875.32,
+   "revenue": 3200.37,
+   "impressions": 79574,
+   "clicks": 1909,
+   "conversions": 41.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 37,
+   "spend": 942.65,
+   "revenue": 3446.55,
+   "impressions": 85695,
+   "clicks": 2056,
+   "conversions": 44.2
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 38,
+   "spend": 1009.99,
+   "revenue": 3692.73,
+   "impressions": 91817,
+   "clicks": 2203,
+   "conversions": 47.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 39,
+   "spend": 1077.32,
+   "revenue": 3938.91,
+   "impressions": 97938,
+   "clicks": 2350,
+   "conversions": 50.5
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 40,
+   "spend": 1009.99,
+   "revenue": 3692.73,
+   "impressions": 91817,
+   "clicks": 2203,
+   "conversions": 47.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 41,
+   "spend": 1009.99,
+   "revenue": 3692.73,
+   "impressions": 91817,
+   "clicks": 2203,
+   "conversions": 47.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 42,
+   "spend": 898.11,
+   "revenue": 3159.62,
+   "impressions": 81646,
+   "clicks": 1959,
+   "conversions": 40.5
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 43,
+   "spend": 972.94,
+   "revenue": 3422.92,
+   "impressions": 88449,
+   "clicks": 2122,
+   "conversions": 43.9
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 44,
+   "spend": 1047.78,
+   "revenue": 3686.22,
+   "impressions": 95252,
+   "clicks": 2286,
+   "conversions": 47.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 45,
+   "spend": 1122.62,
+   "revenue": 3949.52,
+   "impressions": 102056,
+   "clicks": 2449,
+   "conversions": 50.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 46,
+   "spend": 1197.46,
+   "revenue": 4212.82,
+   "impressions": 108860,
+   "clicks": 2612,
+   "conversions": 54.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 47,
+   "spend": 1122.62,
+   "revenue": 3949.52,
+   "impressions": 102056,
+   "clicks": 2449,
+   "conversions": 50.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 48,
+   "spend": 1122.62,
+   "revenue": 3949.52,
+   "impressions": 102056,
+   "clicks": 2449,
+   "conversions": 50.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 49,
+   "spend": 1127.97,
+   "revenue": 4283.27,
+   "impressions": 102542,
+   "clicks": 2461,
+   "conversions": 54.9
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 50,
+   "spend": 1221.96,
+   "revenue": 4640.2,
+   "impressions": 111087,
+   "clicks": 2666,
+   "conversions": 59.5
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 51,
+   "spend": 1315.96,
+   "revenue": 4997.13,
+   "impressions": 119632,
+   "clicks": 2871,
+   "conversions": 64.1
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 52,
+   "spend": 1409.95,
+   "revenue": 5354.07,
+   "impressions": 128177,
+   "clicks": 3076,
+   "conversions": 68.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 53,
+   "spend": 1503.95,
+   "revenue": 5711.01,
+   "impressions": 136722,
+   "clicks": 3281,
+   "conversions": 73.2
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 54,
+   "spend": 1409.95,
+   "revenue": 5354.07,
+   "impressions": 128177,
+   "clicks": 3076,
+   "conversions": 68.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 55,
+   "spend": 1409.95,
+   "revenue": 5354.07,
+   "impressions": 128177,
+   "clicks": 3076,
+   "conversions": 68.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 56,
+   "spend": 978.64,
+   "revenue": 4099.18,
+   "impressions": 88967,
+   "clicks": 2135,
+   "conversions": 52.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 57,
+   "spend": 1060.17,
+   "revenue": 4440.79,
+   "impressions": 96379,
+   "clicks": 2313,
+   "conversions": 56.9
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 58,
+   "spend": 1141.72,
+   "revenue": 4782.39,
+   "impressions": 103792,
+   "clicks": 2491,
+   "conversions": 61.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 59,
+   "spend": 1223.27,
+   "revenue": 5123.99,
+   "impressions": 111206,
+   "clicks": 2668,
+   "conversions": 65.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 60,
+   "spend": 1304.83,
+   "revenue": 5465.59,
+   "impressions": 118620,
+   "clicks": 2846,
+   "conversions": 70.1
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 61,
+   "spend": 1223.27,
+   "revenue": 5123.99,
+   "impressions": 111206,
+   "clicks": 2668,
+   "conversions": 65.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 62,
+   "spend": 1223.27,
+   "revenue": 5123.99,
+   "impressions": 111206,
+   "clicks": 2668,
+   "conversions": 65.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 63,
+   "spend": 787.23,
+   "revenue": 3357.27,
+   "impressions": 71566,
+   "clicks": 1717,
+   "conversions": 43.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 64,
+   "spend": 852.84,
+   "revenue": 3637.04,
+   "impressions": 77530,
+   "clicks": 1860,
+   "conversions": 46.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 65,
+   "spend": 918.45,
+   "revenue": 3916.81,
+   "impressions": 83495,
+   "clicks": 2003,
+   "conversions": 50.2
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 66,
+   "spend": 984.05,
+   "revenue": 4196.58,
+   "impressions": 89459,
+   "clicks": 2147,
+   "conversions": 53.8
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 67,
+   "spend": 1049.65,
+   "revenue": 4476.36,
+   "impressions": 95422,
+   "clicks": 2290,
+   "conversions": 57.4
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 68,
+   "spend": 984.05,
+   "revenue": 4196.58,
+   "impressions": 89459,
+   "clicks": 2147,
+   "conversions": 53.8
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 69,
+   "spend": 984.05,
+   "revenue": 4196.58,
+   "impressions": 89459,
+   "clicks": 2147,
+   "conversions": 53.8
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 70,
+   "spend": 985.9,
+   "revenue": 3886.41,
+   "impressions": 89627,
+   "clicks": 2151,
+   "conversions": 49.8
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 71,
+   "spend": 1068.06,
+   "revenue": 4210.31,
+   "impressions": 97096,
+   "clicks": 2330,
+   "conversions": 54.0
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 72,
+   "spend": 1150.22,
+   "revenue": 4534.18,
+   "impressions": 104565,
+   "clicks": 2509,
+   "conversions": 58.1
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 73,
+   "spend": 1232.37,
+   "revenue": 4858.05,
+   "impressions": 112033,
+   "clicks": 2688,
+   "conversions": 62.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 74,
+   "spend": 1314.53,
+   "revenue": 5181.92,
+   "impressions": 119502,
+   "clicks": 2868,
+   "conversions": 66.4
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 75,
+   "spend": 1232.37,
+   "revenue": 4858.05,
+   "impressions": 112033,
+   "clicks": 2688,
+   "conversions": 62.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 76,
+   "spend": 1232.37,
+   "revenue": 4858.05,
+   "impressions": 112033,
+   "clicks": 2688,
+   "conversions": 62.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 77,
+   "spend": 1126.08,
+   "revenue": 4024.1,
+   "impressions": 102370,
+   "clicks": 2456,
+   "conversions": 51.6
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 78,
+   "spend": 1219.93,
+   "revenue": 4359.43,
+   "impressions": 110902,
+   "clicks": 2661,
+   "conversions": 55.9
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 79,
+   "spend": 1313.77,
+   "revenue": 4694.77,
+   "impressions": 119433,
+   "clicks": 2866,
+   "conversions": 60.2
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 80,
+   "spend": 1407.61,
+   "revenue": 5030.11,
+   "impressions": 127964,
+   "clicks": 3071,
+   "conversions": 64.5
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 81,
+   "spend": 1501.45,
+   "revenue": 5365.45,
+   "impressions": 136495,
+   "clicks": 3275,
+   "conversions": 68.8
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 82,
+   "spend": 1407.61,
+   "revenue": 5030.11,
+   "impressions": 127964,
+   "clicks": 3071,
+   "conversions": 64.5
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 83,
+   "spend": 1407.61,
+   "revenue": 5030.11,
+   "impressions": 127964,
+   "clicks": 3071,
+   "conversions": 64.5
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 84,
+   "spend": 891.3,
+   "revenue": 3174.63,
+   "impressions": 81027,
+   "clicks": 1944,
+   "conversions": 40.7
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 85,
+   "spend": 965.58,
+   "revenue": 3439.19,
+   "impressions": 87780,
+   "clicks": 2106,
+   "conversions": 44.1
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 86,
+   "spend": 1039.85,
+   "revenue": 3703.74,
+   "impressions": 94531,
+   "clicks": 2268,
+   "conversions": 47.5
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 87,
+   "spend": 1114.13,
+   "revenue": 3968.29,
+   "impressions": 101284,
+   "clicks": 2430,
+   "conversions": 50.9
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 88,
+   "spend": 1188.4,
+   "revenue": 4232.84,
+   "impressions": 108036,
+   "clicks": 2592,
+   "conversions": 54.3
+  },
+  {
+   "creative_id": "carousel_holiday",
+   "day_offset": 89,
+   "spend": 1114.13,
+   "revenue": 3968.29,
+   "impressions": 101284,
+   "clicks": 2430,
+   "conversions": 50.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 0,
+   "spend": 540.0,
+   "revenue": 1566.0,
+   "impressions": 51428,
+   "clicks": 719,
+   "conversions": 20.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 1,
+   "spend": 585.0,
+   "revenue": 1696.5,
+   "impressions": 55714,
+   "clicks": 779,
+   "conversions": 22.6
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 2,
+   "spend": 630.0,
+   "revenue": 1827.0,
+   "impressions": 60000,
+   "clicks": 840,
+   "conversions": 24.4
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 3,
+   "spend": 675.0,
+   "revenue": 1957.5,
+   "impressions": 64285,
+   "clicks": 899,
+   "conversions": 26.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 4,
+   "spend": 720.0,
+   "revenue": 2088.0,
+   "impressions": 68571,
+   "clicks": 959,
+   "conversions": 27.8
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 5,
+   "spend": 675.0,
+   "revenue": 1957.5,
+   "impressions": 64285,
+   "clicks": 899,
+   "conversions": 26.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 6,
+   "spend": 675.0,
+   "revenue": 1957.5,
+   "impressions": 64285,
+   "clicks": 899,
+   "conversions": 26.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 7,
+   "spend": 442.8,
+   "revenue": 1411.17,
+   "impressions": 42171,
+   "clicks": 590,
+   "conversions": 18.8
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 8,
+   "spend": 479.71,
+   "revenue": 1528.79,
+   "impressions": 45686,
+   "clicks": 639,
+   "conversions": 20.4
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 9,
+   "spend": 516.61,
+   "revenue": 1646.39,
+   "impressions": 49200,
+   "clicks": 688,
+   "conversions": 22.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 10,
+   "spend": 553.51,
+   "revenue": 1763.99,
+   "impressions": 52715,
+   "clicks": 738,
+   "conversions": 23.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 11,
+   "spend": 590.41,
+   "revenue": 1881.59,
+   "impressions": 56229,
+   "clicks": 787,
+   "conversions": 25.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 12,
+   "spend": 553.51,
+   "revenue": 1763.99,
+   "impressions": 52715,
+   "clicks": 738,
+   "conversions": 23.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 13,
+   "spend": 553.51,
+   "revenue": 1763.99,
+   "impressions": 52715,
+   "clicks": 738,
+   "conversions": 23.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 14,
+   "spend": 551.33,
+   "revenue": 1649.87,
+   "impressions": 52507,
+   "clicks": 735,
+   "conversions": 22.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 15,
+   "spend": 597.27,
+   "revenue": 1787.36,
+   "impressions": 56882,
+   "clicks": 796,
+   "conversions": 23.8
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 16,
+   "spend": 643.22,
+   "revenue": 1924.85,
+   "impressions": 61259,
+   "clicks": 857,
+   "conversions": 25.7
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 17,
+   "spend": 689.16,
+   "revenue": 2062.34,
+   "impressions": 65634,
+   "clicks": 918,
+   "conversions": 27.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 18,
+   "spend": 735.1,
+   "revenue": 2199.83,
+   "impressions": 70009,
+   "clicks": 980,
+   "conversions": 29.3
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 19,
+   "spend": 689.16,
+   "revenue": 2062.34,
+   "impressions": 65634,
+   "clicks": 918,
+   "conversions": 27.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 20,
+   "spend": 689.16,
+   "revenue": 2062.34,
+   "impressions": 65634,
+   "clicks": 918,
+   "conversions": 27.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 21,
+   "spend": 634.27,
+   "revenue": 1710.66,
+   "impressions": 60406,
+   "clicks": 845,
+   "conversions": 22.8
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 22,
+   "spend": 687.13,
+   "revenue": 1853.21,
+   "impressions": 65440,
+   "clicks": 916,
+   "conversions": 24.7
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 23,
+   "spend": 739.99,
+   "revenue": 1995.77,
+   "impressions": 70475,
+   "clicks": 986,
+   "conversions": 26.6
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 24,
+   "spend": 792.84,
+   "revenue": 2138.32,
+   "impressions": 75508,
+   "clicks": 1057,
+   "conversions": 28.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 25,
+   "spend": 845.7,
+   "revenue": 2280.88,
+   "impressions": 80542,
+   "clicks": 1127,
+   "conversions": 30.4
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 26,
+   "spend": 792.84,
+   "revenue": 2138.32,
+   "impressions": 75508,
+   "clicks": 1057,
+   "conversions": 28.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 27,
+   "spend": 792.84,
+   "revenue": 2138.32,
+   "impressions": 75508,
+   "clicks": 1057,
+   "conversions": 28.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 28,
+   "spend": 504.39,
+   "revenue": 1323.15,
+   "impressions": 48037,
+   "clicks": 672,
+   "conversions": 17.6
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 29,
+   "spend": 546.41,
+   "revenue": 1433.42,
+   "impressions": 52039,
+   "clicks": 728,
+   "conversions": 19.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 30,
+   "spend": 588.44,
+   "revenue": 1543.68,
+   "impressions": 56041,
+   "clicks": 784,
+   "conversions": 20.6
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 31,
+   "spend": 630.47,
+   "revenue": 1653.94,
+   "impressions": 60044,
+   "clicks": 840,
+   "conversions": 22.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 32,
+   "spend": 672.5,
+   "revenue": 1764.2,
+   "impressions": 64047,
+   "clicks": 896,
+   "conversions": 23.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 33,
+   "spend": 630.47,
+   "revenue": 1653.94,
+   "impressions": 60044,
+   "clicks": 840,
+   "conversions": 22.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 34,
+   "spend": 630.47,
+   "revenue": 1653.94,
+   "impressions": 60044,
+   "clicks": 840,
+   "conversions": 22.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 35,
+   "spend": 454.92,
+   "revenue": 1297.36,
+   "impressions": 43325,
+   "clicks": 606,
+   "conversions": 17.3
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 36,
+   "spend": 492.81,
+   "revenue": 1405.5,
+   "impressions": 46934,
+   "clicks": 657,
+   "conversions": 18.7
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 37,
+   "spend": 530.72,
+   "revenue": 1513.61,
+   "impressions": 50544,
+   "clicks": 707,
+   "conversions": 20.2
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 38,
+   "spend": 568.63,
+   "revenue": 1621.73,
+   "impressions": 54155,
+   "clicks": 758,
+   "conversions": 21.6
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 39,
+   "spend": 606.54,
+   "revenue": 1729.84,
+   "impressions": 57765,
+   "clicks": 808,
+   "conversions": 23.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 40,
+   "spend": 568.63,
+   "revenue": 1621.73,
+   "impressions": 54155,
+   "clicks": 758,
+   "conversions": 21.6
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 41,
+   "spend": 568.63,
+   "revenue": 1621.73,
+   "impressions": 54155,
+   "clicks": 758,
+   "conversions": 21.6
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 42,
+   "spend": 597.54,
+   "revenue": 1872.17,
+   "impressions": 56908,
+   "clicks": 796,
+   "conversions": 25.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 43,
+   "spend": 647.35,
+   "revenue": 2028.2,
+   "impressions": 61652,
+   "clicks": 863,
+   "conversions": 27.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 44,
+   "spend": 697.14,
+   "revenue": 2184.21,
+   "impressions": 66394,
+   "clicks": 929,
+   "conversions": 29.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 45,
+   "spend": 746.94,
+   "revenue": 2340.23,
+   "impressions": 71137,
+   "clicks": 995,
+   "conversions": 31.2
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 46,
+   "spend": 796.73,
+   "revenue": 2496.24,
+   "impressions": 75879,
+   "clicks": 1062,
+   "conversions": 33.3
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 47,
+   "spend": 746.94,
+   "revenue": 2340.23,
+   "impressions": 71137,
+   "clicks": 995,
+   "conversions": 31.2
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 48,
+   "spend": 746.94,
+   "revenue": 2340.23,
+   "impressions": 71137,
+   "clicks": 995,
+   "conversions": 31.2
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 49,
+   "spend": 610.26,
+   "revenue": 1928.13,
+   "impressions": 58120,
+   "clicks": 813,
+   "conversions": 25.7
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 50,
+   "spend": 661.12,
+   "revenue": 2088.8,
+   "impressions": 62963,
+   "clicks": 881,
+   "conversions": 27.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 51,
+   "spend": 711.97,
+   "revenue": 2249.48,
+   "impressions": 67806,
+   "clicks": 949,
+   "conversions": 30.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 52,
+   "spend": 762.83,
+   "revenue": 2410.15,
+   "impressions": 72650,
+   "clicks": 1017,
+   "conversions": 32.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 53,
+   "spend": 813.69,
+   "revenue": 2570.83,
+   "impressions": 77494,
+   "clicks": 1084,
+   "conversions": 34.3
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 54,
+   "spend": 762.83,
+   "revenue": 2410.15,
+   "impressions": 72650,
+   "clicks": 1017,
+   "conversions": 32.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 55,
+   "spend": 762.83,
+   "revenue": 2410.15,
+   "impressions": 72650,
+   "clicks": 1017,
+   "conversions": 32.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 56,
+   "spend": 464.34,
+   "revenue": 1347.67,
+   "impressions": 44222,
+   "clicks": 619,
+   "conversions": 18.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 57,
+   "spend": 503.04,
+   "revenue": 1459.98,
+   "impressions": 47908,
+   "clicks": 670,
+   "conversions": 19.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 58,
+   "spend": 541.73,
+   "revenue": 1572.28,
+   "impressions": 51593,
+   "clicks": 722,
+   "conversions": 21.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 59,
+   "spend": 580.43,
+   "revenue": 1684.59,
+   "impressions": 55279,
+   "clicks": 773,
+   "conversions": 22.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 60,
+   "spend": 619.13,
+   "revenue": 1796.89,
+   "impressions": 58964,
+   "clicks": 825,
+   "conversions": 24.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 61,
+   "spend": 580.43,
+   "revenue": 1684.59,
+   "impressions": 55279,
+   "clicks": 773,
+   "conversions": 22.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 62,
+   "spend": 580.43,
+   "revenue": 1684.59,
+   "impressions": 55279,
+   "clicks": 773,
+   "conversions": 22.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 63,
+   "spend": 489.23,
+   "revenue": 1292.85,
+   "impressions": 46593,
+   "clicks": 652,
+   "conversions": 17.2
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 64,
+   "spend": 530.0,
+   "revenue": 1400.58,
+   "impressions": 50476,
+   "clicks": 706,
+   "conversions": 18.7
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 65,
+   "spend": 570.77,
+   "revenue": 1508.32,
+   "impressions": 54359,
+   "clicks": 761,
+   "conversions": 20.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 66,
+   "spend": 611.54,
+   "revenue": 1616.06,
+   "impressions": 58241,
+   "clicks": 815,
+   "conversions": 21.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 67,
+   "spend": 652.31,
+   "revenue": 1723.79,
+   "impressions": 62124,
+   "clicks": 869,
+   "conversions": 23.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 68,
+   "spend": 611.54,
+   "revenue": 1616.06,
+   "impressions": 58241,
+   "clicks": 815,
+   "conversions": 21.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 69,
+   "spend": 611.54,
+   "revenue": 1616.06,
+   "impressions": 58241,
+   "clicks": 815,
+   "conversions": 21.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 70,
+   "spend": 628.75,
+   "revenue": 1675.1,
+   "impressions": 59880,
+   "clicks": 838,
+   "conversions": 22.3
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 71,
+   "spend": 681.13,
+   "revenue": 1814.66,
+   "impressions": 64869,
+   "clicks": 908,
+   "conversions": 24.2
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 72,
+   "spend": 733.53,
+   "revenue": 1954.25,
+   "impressions": 69860,
+   "clicks": 978,
+   "conversions": 26.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 73,
+   "spend": 785.92,
+   "revenue": 2093.84,
+   "impressions": 74849,
+   "clicks": 1047,
+   "conversions": 27.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 74,
+   "spend": 838.32,
+   "revenue": 2233.43,
+   "impressions": 79840,
+   "clicks": 1117,
+   "conversions": 29.8
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 75,
+   "spend": 785.92,
+   "revenue": 2093.84,
+   "impressions": 74849,
+   "clicks": 1047,
+   "conversions": 27.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 76,
+   "spend": 785.92,
+   "revenue": 2093.84,
+   "impressions": 74849,
+   "clicks": 1047,
+   "conversions": 27.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 77,
+   "spend": 567.89,
+   "revenue": 1671.58,
+   "impressions": 54084,
+   "clicks": 757,
+   "conversions": 22.3
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 78,
+   "spend": 615.23,
+   "revenue": 1810.9,
+   "impressions": 58593,
+   "clicks": 820,
+   "conversions": 24.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 79,
+   "spend": 662.55,
+   "revenue": 1950.2,
+   "impressions": 63099,
+   "clicks": 883,
+   "conversions": 26.0
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 80,
+   "spend": 709.88,
+   "revenue": 2089.5,
+   "impressions": 67607,
+   "clicks": 946,
+   "conversions": 27.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 81,
+   "spend": 757.2,
+   "revenue": 2228.8,
+   "impressions": 72114,
+   "clicks": 1009,
+   "conversions": 29.7
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 82,
+   "spend": 709.88,
+   "revenue": 2089.5,
+   "impressions": 67607,
+   "clicks": 946,
+   "conversions": 27.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 83,
+   "spend": 709.88,
+   "revenue": 2089.5,
+   "impressions": 67607,
+   "clicks": 946,
+   "conversions": 27.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 84,
+   "spend": 444.07,
+   "revenue": 1410.03,
+   "impressions": 42292,
+   "clicks": 592,
+   "conversions": 18.8
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 85,
+   "spend": 481.08,
+   "revenue": 1527.54,
+   "impressions": 45817,
+   "clicks": 641,
+   "conversions": 20.4
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 86,
+   "spend": 518.08,
+   "revenue": 1645.04,
+   "impressions": 49340,
+   "clicks": 690,
+   "conversions": 21.9
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 87,
+   "spend": 555.09,
+   "revenue": 1762.55,
+   "impressions": 52865,
+   "clicks": 740,
+   "conversions": 23.5
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 88,
+   "spend": 592.1,
+   "revenue": 1880.05,
+   "impressions": 56390,
+   "clicks": 789,
+   "conversions": 25.1
+  },
+  {
+   "creative_id": "static_holiday_v1",
+   "day_offset": 89,
+   "spend": 555.09,
+   "revenue": 1762.55,
+   "impressions": 52865,
+   "clicks": 740,
+   "conversions": 23.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 0,
+   "spend": 1680.0,
+   "revenue": 5376.0,
+   "impressions": 224000,
+   "clicks": 2688,
+   "conversions": 64.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 1,
+   "spend": 1820.0,
+   "revenue": 5824.0,
+   "impressions": 242666,
+   "clicks": 2911,
+   "conversions": 69.3
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 2,
+   "spend": 1960.0,
+   "revenue": 6272.0,
+   "impressions": 261333,
+   "clicks": 3135,
+   "conversions": 74.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 3,
+   "spend": 2100.0,
+   "revenue": 6720.0,
+   "impressions": 280000,
+   "clicks": 3360,
+   "conversions": 80.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 4,
+   "spend": 2240.0,
+   "revenue": 7168.0,
+   "impressions": 298666,
+   "clicks": 3583,
+   "conversions": 85.3
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 5,
+   "spend": 2100.0,
+   "revenue": 6720.0,
+   "impressions": 280000,
+   "clicks": 3360,
+   "conversions": 80.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 6,
+   "spend": 2100.0,
+   "revenue": 6720.0,
+   "impressions": 280000,
+   "clicks": 3360,
+   "conversions": 80.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 7,
+   "spend": 1513.47,
+   "revenue": 4471.33,
+   "impressions": 201796,
+   "clicks": 2421,
+   "conversions": 53.2
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 8,
+   "spend": 1639.6,
+   "revenue": 4843.92,
+   "impressions": 218613,
+   "clicks": 2623,
+   "conversions": 57.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 9,
+   "spend": 1765.72,
+   "revenue": 5216.53,
+   "impressions": 235429,
+   "clicks": 2825,
+   "conversions": 62.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 10,
+   "spend": 1891.84,
+   "revenue": 5589.14,
+   "impressions": 252245,
+   "clicks": 3026,
+   "conversions": 66.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 11,
+   "spend": 2017.96,
+   "revenue": 5961.75,
+   "impressions": 269061,
+   "clicks": 3228,
+   "conversions": 71.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 12,
+   "spend": 1891.84,
+   "revenue": 5589.14,
+   "impressions": 252245,
+   "clicks": 3026,
+   "conversions": 66.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 13,
+   "spend": 1891.84,
+   "revenue": 5589.14,
+   "impressions": 252245,
+   "clicks": 3026,
+   "conversions": 66.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 14,
+   "spend": 1951.77,
+   "revenue": 5671.49,
+   "impressions": 260236,
+   "clicks": 3122,
+   "conversions": 67.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 15,
+   "spend": 2114.42,
+   "revenue": 6144.1,
+   "impressions": 281922,
+   "clicks": 3383,
+   "conversions": 73.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 16,
+   "spend": 2277.06,
+   "revenue": 6616.73,
+   "impressions": 303608,
+   "clicks": 3643,
+   "conversions": 78.8
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 17,
+   "spend": 2439.71,
+   "revenue": 7089.35,
+   "impressions": 325294,
+   "clicks": 3903,
+   "conversions": 84.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 18,
+   "spend": 2602.36,
+   "revenue": 7561.97,
+   "impressions": 346981,
+   "clicks": 4163,
+   "conversions": 90.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 19,
+   "spend": 2439.71,
+   "revenue": 7089.35,
+   "impressions": 325294,
+   "clicks": 3903,
+   "conversions": 84.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 20,
+   "spend": 2439.71,
+   "revenue": 7089.35,
+   "impressions": 325294,
+   "clicks": 3903,
+   "conversions": 84.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 21,
+   "spend": 1776.49,
+   "revenue": 5647.1,
+   "impressions": 236865,
+   "clicks": 2842,
+   "conversions": 67.2
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 22,
+   "spend": 1924.54,
+   "revenue": 6117.67,
+   "impressions": 256605,
+   "clicks": 3079,
+   "conversions": 72.8
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 23,
+   "spend": 2072.58,
+   "revenue": 6588.26,
+   "impressions": 276344,
+   "clicks": 3316,
+   "conversions": 78.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 24,
+   "spend": 2220.62,
+   "revenue": 7058.85,
+   "impressions": 296082,
+   "clicks": 3552,
+   "conversions": 84.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 25,
+   "spend": 2368.66,
+   "revenue": 7529.44,
+   "impressions": 315821,
+   "clicks": 3789,
+   "conversions": 89.6
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 26,
+   "spend": 2220.62,
+   "revenue": 7058.85,
+   "impressions": 296082,
+   "clicks": 3552,
+   "conversions": 84.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 27,
+   "spend": 2220.62,
+   "revenue": 7058.85,
+   "impressions": 296082,
+   "clicks": 3552,
+   "conversions": 84.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 28,
+   "spend": 1383.34,
+   "revenue": 4807.11,
+   "impressions": 184445,
+   "clicks": 2213,
+   "conversions": 57.2
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 29,
+   "spend": 1498.65,
+   "revenue": 5207.69,
+   "impressions": 199820,
+   "clicks": 2397,
+   "conversions": 62.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 30,
+   "spend": 1613.93,
+   "revenue": 5608.28,
+   "impressions": 215190,
+   "clicks": 2582,
+   "conversions": 66.8
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 31,
+   "spend": 1729.21,
+   "revenue": 6008.87,
+   "impressions": 230561,
+   "clicks": 2766,
+   "conversions": 71.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 32,
+   "spend": 1844.49,
+   "revenue": 6409.46,
+   "impressions": 245932,
+   "clicks": 2951,
+   "conversions": 76.3
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 33,
+   "spend": 1729.21,
+   "revenue": 6008.87,
+   "impressions": 230561,
+   "clicks": 2766,
+   "conversions": 71.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 34,
+   "spend": 1729.21,
+   "revenue": 6008.87,
+   "impressions": 230561,
+   "clicks": 2766,
+   "conversions": 71.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 35,
+   "spend": 1659.95,
+   "revenue": 5761.07,
+   "impressions": 221326,
+   "clicks": 2655,
+   "conversions": 68.6
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 36,
+   "spend": 1798.27,
+   "revenue": 6241.16,
+   "impressions": 239769,
+   "clicks": 2877,
+   "conversions": 74.3
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 37,
+   "spend": 1936.6,
+   "revenue": 6721.25,
+   "impressions": 258213,
+   "clicks": 3098,
+   "conversions": 80.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 38,
+   "spend": 2074.93,
+   "revenue": 7201.33,
+   "impressions": 276657,
+   "clicks": 3319,
+   "conversions": 85.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 39,
+   "spend": 2213.26,
+   "revenue": 7681.42,
+   "impressions": 295101,
+   "clicks": 3541,
+   "conversions": 91.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 40,
+   "spend": 2074.93,
+   "revenue": 7201.33,
+   "impressions": 276657,
+   "clicks": 3319,
+   "conversions": 85.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 41,
+   "spend": 2074.93,
+   "revenue": 7201.33,
+   "impressions": 276657,
+   "clicks": 3319,
+   "conversions": 85.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 42,
+   "spend": 1981.83,
+   "revenue": 6283.48,
+   "impressions": 264244,
+   "clicks": 3170,
+   "conversions": 74.8
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 43,
+   "spend": 2146.95,
+   "revenue": 6807.11,
+   "impressions": 286260,
+   "clicks": 3435,
+   "conversions": 81.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 44,
+   "spend": 2312.1,
+   "revenue": 7330.73,
+   "impressions": 308280,
+   "clicks": 3699,
+   "conversions": 87.3
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 45,
+   "spend": 2477.25,
+   "revenue": 7854.36,
+   "impressions": 330300,
+   "clicks": 3963,
+   "conversions": 93.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 46,
+   "spend": 2642.4,
+   "revenue": 8377.98,
+   "impressions": 352320,
+   "clicks": 4227,
+   "conversions": 99.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 47,
+   "spend": 2477.25,
+   "revenue": 7854.36,
+   "impressions": 330300,
+   "clicks": 3963,
+   "conversions": 93.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 48,
+   "spend": 2477.25,
+   "revenue": 7854.36,
+   "impressions": 330300,
+   "clicks": 3963,
+   "conversions": 93.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 49,
+   "spend": 1622.27,
+   "revenue": 4708.96,
+   "impressions": 216302,
+   "clicks": 2595,
+   "conversions": 56.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 50,
+   "spend": 1757.47,
+   "revenue": 5101.39,
+   "impressions": 234329,
+   "clicks": 2811,
+   "conversions": 60.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 51,
+   "spend": 1892.67,
+   "revenue": 5493.8,
+   "impressions": 252356,
+   "clicks": 3028,
+   "conversions": 65.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 52,
+   "spend": 2027.86,
+   "revenue": 5886.22,
+   "impressions": 270381,
+   "clicks": 3244,
+   "conversions": 70.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 53,
+   "spend": 2163.05,
+   "revenue": 6278.63,
+   "impressions": 288406,
+   "clicks": 3460,
+   "conversions": 74.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 54,
+   "spend": 2027.86,
+   "revenue": 5886.22,
+   "impressions": 270381,
+   "clicks": 3244,
+   "conversions": 70.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 55,
+   "spend": 2027.86,
+   "revenue": 5886.22,
+   "impressions": 270381,
+   "clicks": 3244,
+   "conversions": 70.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 56,
+   "spend": 1393.05,
+   "revenue": 4123.04,
+   "impressions": 185739,
+   "clicks": 2228,
+   "conversions": 49.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 57,
+   "spend": 1509.16,
+   "revenue": 4466.63,
+   "impressions": 201221,
+   "clicks": 2414,
+   "conversions": 53.2
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 58,
+   "spend": 1625.25,
+   "revenue": 4810.22,
+   "impressions": 216700,
+   "clicks": 2600,
+   "conversions": 57.3
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 59,
+   "spend": 1741.34,
+   "revenue": 5153.81,
+   "impressions": 232178,
+   "clicks": 2786,
+   "conversions": 61.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 60,
+   "spend": 1857.43,
+   "revenue": 5497.39,
+   "impressions": 247657,
+   "clicks": 2971,
+   "conversions": 65.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 61,
+   "spend": 1741.34,
+   "revenue": 5153.81,
+   "impressions": 232178,
+   "clicks": 2786,
+   "conversions": 61.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 62,
+   "spend": 1741.34,
+   "revenue": 5153.81,
+   "impressions": 232178,
+   "clicks": 2786,
+   "conversions": 61.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 63,
+   "spend": 1811.64,
+   "revenue": 5940.99,
+   "impressions": 241552,
+   "clicks": 2898,
+   "conversions": 70.7
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 64,
+   "spend": 1962.63,
+   "revenue": 6436.05,
+   "impressions": 261684,
+   "clicks": 3140,
+   "conversions": 76.6
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 65,
+   "spend": 2113.6,
+   "revenue": 6931.13,
+   "impressions": 281813,
+   "clicks": 3381,
+   "conversions": 82.5
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 66,
+   "spend": 2264.57,
+   "revenue": 7426.21,
+   "impressions": 301942,
+   "clicks": 3623,
+   "conversions": 88.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 67,
+   "spend": 2415.54,
+   "revenue": 7921.29,
+   "impressions": 322072,
+   "clicks": 3864,
+   "conversions": 94.3
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 68,
+   "spend": 2264.57,
+   "revenue": 7426.21,
+   "impressions": 301942,
+   "clicks": 3623,
+   "conversions": 88.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 69,
+   "spend": 2264.57,
+   "revenue": 7426.21,
+   "impressions": 301942,
+   "clicks": 3623,
+   "conversions": 88.4
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 70,
+   "spend": 1932.99,
+   "revenue": 6789.23,
+   "impressions": 257732,
+   "clicks": 3092,
+   "conversions": 80.8
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 71,
+   "spend": 2094.09,
+   "revenue": 7354.99,
+   "impressions": 279212,
+   "clicks": 3350,
+   "conversions": 87.6
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 72,
+   "spend": 2255.17,
+   "revenue": 7920.76,
+   "impressions": 300689,
+   "clicks": 3608,
+   "conversions": 94.3
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 73,
+   "spend": 2416.26,
+   "revenue": 8486.52,
+   "impressions": 322168,
+   "clicks": 3866,
+   "conversions": 101.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 74,
+   "spend": 2577.34,
+   "revenue": 9052.29,
+   "impressions": 343645,
+   "clicks": 4123,
+   "conversions": 107.8
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 75,
+   "spend": 2416.26,
+   "revenue": 8486.52,
+   "impressions": 322168,
+   "clicks": 3866,
+   "conversions": 101.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 76,
+   "spend": 2416.26,
+   "revenue": 8486.52,
+   "impressions": 322168,
+   "clicks": 3866,
+   "conversions": 101.0
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 77,
+   "spend": 1483.14,
+   "revenue": 5048.61,
+   "impressions": 197752,
+   "clicks": 2373,
+   "conversions": 60.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 78,
+   "spend": 1606.74,
+   "revenue": 5469.32,
+   "impressions": 214232,
+   "clicks": 2570,
+   "conversions": 65.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 79,
+   "spend": 1730.34,
+   "revenue": 5890.04,
+   "impressions": 230712,
+   "clicks": 2768,
+   "conversions": 70.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 80,
+   "spend": 1853.94,
+   "revenue": 6310.75,
+   "impressions": 247192,
+   "clicks": 2966,
+   "conversions": 75.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 81,
+   "spend": 1977.53,
+   "revenue": 6731.47,
+   "impressions": 263670,
+   "clicks": 3164,
+   "conversions": 80.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 82,
+   "spend": 1853.94,
+   "revenue": 6310.75,
+   "impressions": 247192,
+   "clicks": 2966,
+   "conversions": 75.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 83,
+   "spend": 1853.94,
+   "revenue": 6310.75,
+   "impressions": 247192,
+   "clicks": 2966,
+   "conversions": 75.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 84,
+   "spend": 1477.72,
+   "revenue": 4540.71,
+   "impressions": 197029,
+   "clicks": 2364,
+   "conversions": 54.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 85,
+   "spend": 1600.87,
+   "revenue": 4919.11,
+   "impressions": 213449,
+   "clicks": 2561,
+   "conversions": 58.6
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 86,
+   "spend": 1724.01,
+   "revenue": 5297.5,
+   "impressions": 229868,
+   "clicks": 2758,
+   "conversions": 63.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 87,
+   "spend": 1847.15,
+   "revenue": 5675.9,
+   "impressions": 246286,
+   "clicks": 2955,
+   "conversions": 67.6
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 88,
+   "spend": 1970.3,
+   "revenue": 6054.29,
+   "impressions": 262706,
+   "clicks": 3152,
+   "conversions": 72.1
+  },
+  {
+   "creative_id": "static_v7",
+   "day_offset": 89,
+   "spend": 1847.15,
+   "revenue": 5675.9,
+   "impressions": 246286,
+   "clicks": 2955,
+   "conversions": 67.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 0,
+   "spend": 720.0,
+   "revenue": 1728.0,
+   "impressions": 92307,
+   "clicks": 923,
+   "conversions": 21.3
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 1,
+   "spend": 780.0,
+   "revenue": 1872.0,
+   "impressions": 100000,
+   "clicks": 1000,
+   "conversions": 23.1
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 2,
+   "spend": 840.0,
+   "revenue": 2016.0,
+   "impressions": 107692,
+   "clicks": 1076,
+   "conversions": 24.9
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 3,
+   "spend": 900.0,
+   "revenue": 2160.0,
+   "impressions": 115384,
+   "clicks": 1153,
+   "conversions": 26.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 4,
+   "spend": 960.0,
+   "revenue": 2304.0,
+   "impressions": 123076,
+   "clicks": 1230,
+   "conversions": 28.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 5,
+   "spend": 900.0,
+   "revenue": 2160.0,
+   "impressions": 115384,
+   "clicks": 1153,
+   "conversions": 26.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 6,
+   "spend": 900.0,
+   "revenue": 2160.0,
+   "impressions": 115384,
+   "clicks": 1153,
+   "conversions": 26.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 7,
+   "spend": 772.46,
+   "revenue": 1860.16,
+   "impressions": 99033,
+   "clicks": 990,
+   "conversions": 23.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 8,
+   "spend": 836.84,
+   "revenue": 2015.17,
+   "impressions": 107287,
+   "clicks": 1072,
+   "conversions": 24.9
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 9,
+   "spend": 901.21,
+   "revenue": 2170.18,
+   "impressions": 115539,
+   "clicks": 1155,
+   "conversions": 26.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 10,
+   "spend": 965.59,
+   "revenue": 2325.2,
+   "impressions": 123793,
+   "clicks": 1237,
+   "conversions": 28.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 11,
+   "spend": 1029.96,
+   "revenue": 2480.21,
+   "impressions": 132046,
+   "clicks": 1320,
+   "conversions": 30.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 12,
+   "spend": 965.59,
+   "revenue": 2325.2,
+   "impressions": 123793,
+   "clicks": 1237,
+   "conversions": 28.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 13,
+   "spend": 965.59,
+   "revenue": 2325.2,
+   "impressions": 123793,
+   "clicks": 1237,
+   "conversions": 28.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 14,
+   "spend": 830.74,
+   "revenue": 2174.44,
+   "impressions": 106505,
+   "clicks": 1065,
+   "conversions": 26.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 15,
+   "spend": 899.99,
+   "revenue": 2355.65,
+   "impressions": 115383,
+   "clicks": 1153,
+   "conversions": 29.1
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 16,
+   "spend": 969.22,
+   "revenue": 2536.85,
+   "impressions": 124258,
+   "clicks": 1242,
+   "conversions": 31.3
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 17,
+   "spend": 1038.45,
+   "revenue": 2718.06,
+   "impressions": 133134,
+   "clicks": 1331,
+   "conversions": 33.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 18,
+   "spend": 1107.67,
+   "revenue": 2899.26,
+   "impressions": 142008,
+   "clicks": 1420,
+   "conversions": 35.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 19,
+   "spend": 1038.45,
+   "revenue": 2718.06,
+   "impressions": 133134,
+   "clicks": 1331,
+   "conversions": 33.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 20,
+   "spend": 1038.45,
+   "revenue": 2718.06,
+   "impressions": 133134,
+   "clicks": 1331,
+   "conversions": 33.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 21,
+   "spend": 638.98,
+   "revenue": 1654.46,
+   "impressions": 81920,
+   "clicks": 819,
+   "conversions": 20.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 22,
+   "spend": 692.24,
+   "revenue": 1792.33,
+   "impressions": 88748,
+   "clicks": 887,
+   "conversions": 22.1
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 23,
+   "spend": 745.49,
+   "revenue": 1930.21,
+   "impressions": 95575,
+   "clicks": 955,
+   "conversions": 23.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 24,
+   "spend": 798.74,
+   "revenue": 2068.08,
+   "impressions": 102402,
+   "clicks": 1024,
+   "conversions": 25.5
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 25,
+   "spend": 851.99,
+   "revenue": 2205.95,
+   "impressions": 109229,
+   "clicks": 1092,
+   "conversions": 27.2
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 26,
+   "spend": 798.74,
+   "revenue": 2068.08,
+   "impressions": 102402,
+   "clicks": 1024,
+   "conversions": 25.5
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 27,
+   "spend": 798.74,
+   "revenue": 2068.08,
+   "impressions": 102402,
+   "clicks": 1024,
+   "conversions": 25.5
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 28,
+   "spend": 630.11,
+   "revenue": 1483.42,
+   "impressions": 80783,
+   "clicks": 807,
+   "conversions": 18.3
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 29,
+   "spend": 682.63,
+   "revenue": 1607.04,
+   "impressions": 87516,
+   "clicks": 875,
+   "conversions": 19.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 30,
+   "spend": 735.14,
+   "revenue": 1730.66,
+   "impressions": 94248,
+   "clicks": 942,
+   "conversions": 21.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 31,
+   "spend": 787.65,
+   "revenue": 1854.28,
+   "impressions": 100980,
+   "clicks": 1009,
+   "conversions": 22.9
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 32,
+   "spend": 840.16,
+   "revenue": 1977.9,
+   "impressions": 107712,
+   "clicks": 1077,
+   "conversions": 24.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 33,
+   "spend": 787.65,
+   "revenue": 1854.28,
+   "impressions": 100980,
+   "clicks": 1009,
+   "conversions": 22.9
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 34,
+   "spend": 787.65,
+   "revenue": 1854.28,
+   "impressions": 100980,
+   "clicks": 1009,
+   "conversions": 22.9
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 35,
+   "spend": 824.19,
+   "revenue": 1787.86,
+   "impressions": 105665,
+   "clicks": 1056,
+   "conversions": 22.1
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 36,
+   "spend": 892.85,
+   "revenue": 1936.83,
+   "impressions": 114467,
+   "clicks": 1144,
+   "conversions": 23.9
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 37,
+   "spend": 961.53,
+   "revenue": 2085.82,
+   "impressions": 123273,
+   "clicks": 1232,
+   "conversions": 25.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 38,
+   "spend": 1030.21,
+   "revenue": 2234.8,
+   "impressions": 132078,
+   "clicks": 1320,
+   "conversions": 27.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 39,
+   "spend": 1098.89,
+   "revenue": 2383.79,
+   "impressions": 140883,
+   "clicks": 1408,
+   "conversions": 29.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 40,
+   "spend": 1030.21,
+   "revenue": 2234.8,
+   "impressions": 132078,
+   "clicks": 1320,
+   "conversions": 27.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 41,
+   "spend": 1030.21,
+   "revenue": 2234.8,
+   "impressions": 132078,
+   "clicks": 1320,
+   "conversions": 27.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 42,
+   "spend": 783.03,
+   "revenue": 1751.26,
+   "impressions": 100388,
+   "clicks": 1003,
+   "conversions": 21.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 43,
+   "spend": 848.29,
+   "revenue": 1897.19,
+   "impressions": 108755,
+   "clicks": 1087,
+   "conversions": 23.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 44,
+   "spend": 913.54,
+   "revenue": 2043.13,
+   "impressions": 117120,
+   "clicks": 1171,
+   "conversions": 25.2
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 45,
+   "spend": 978.8,
+   "revenue": 2189.06,
+   "impressions": 125487,
+   "clicks": 1254,
+   "conversions": 27.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 46,
+   "spend": 1044.05,
+   "revenue": 2335.0,
+   "impressions": 133852,
+   "clicks": 1338,
+   "conversions": 28.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 47,
+   "spend": 978.8,
+   "revenue": 2189.06,
+   "impressions": 125487,
+   "clicks": 1254,
+   "conversions": 27.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 48,
+   "spend": 978.8,
+   "revenue": 2189.06,
+   "impressions": 125487,
+   "clicks": 1254,
+   "conversions": 27.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 49,
+   "spend": 599.59,
+   "revenue": 1488.41,
+   "impressions": 76870,
+   "clicks": 768,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 50,
+   "spend": 649.55,
+   "revenue": 1612.44,
+   "impressions": 83275,
+   "clicks": 832,
+   "conversions": 19.9
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 51,
+   "spend": 699.52,
+   "revenue": 1736.48,
+   "impressions": 89682,
+   "clicks": 896,
+   "conversions": 21.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 52,
+   "spend": 749.48,
+   "revenue": 1860.51,
+   "impressions": 96087,
+   "clicks": 960,
+   "conversions": 23.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 53,
+   "spend": 799.45,
+   "revenue": 1984.54,
+   "impressions": 102493,
+   "clicks": 1024,
+   "conversions": 24.5
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 54,
+   "spend": 749.48,
+   "revenue": 1860.51,
+   "impressions": 96087,
+   "clicks": 960,
+   "conversions": 23.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 55,
+   "spend": 749.48,
+   "revenue": 1860.51,
+   "impressions": 96087,
+   "clicks": 960,
+   "conversions": 23.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 56,
+   "spend": 688.0,
+   "revenue": 1815.12,
+   "impressions": 88205,
+   "clicks": 882,
+   "conversions": 22.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 57,
+   "spend": 745.32,
+   "revenue": 1966.36,
+   "impressions": 95553,
+   "clicks": 955,
+   "conversions": 24.3
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 58,
+   "spend": 802.66,
+   "revenue": 2117.62,
+   "impressions": 102905,
+   "clicks": 1029,
+   "conversions": 26.1
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 59,
+   "spend": 859.99,
+   "revenue": 2268.88,
+   "impressions": 110255,
+   "clicks": 1102,
+   "conversions": 28.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 60,
+   "spend": 917.32,
+   "revenue": 2420.14,
+   "impressions": 117605,
+   "clicks": 1176,
+   "conversions": 29.9
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 61,
+   "spend": 859.99,
+   "revenue": 2268.88,
+   "impressions": 110255,
+   "clicks": 1102,
+   "conversions": 28.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 62,
+   "spend": 859.99,
+   "revenue": 2268.88,
+   "impressions": 110255,
+   "clicks": 1102,
+   "conversions": 28.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 63,
+   "spend": 848.66,
+   "revenue": 2150.3,
+   "impressions": 108802,
+   "clicks": 1088,
+   "conversions": 26.5
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 64,
+   "spend": 919.38,
+   "revenue": 2329.5,
+   "impressions": 117869,
+   "clicks": 1178,
+   "conversions": 28.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 65,
+   "spend": 990.11,
+   "revenue": 2508.69,
+   "impressions": 126937,
+   "clicks": 1269,
+   "conversions": 31.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 66,
+   "spend": 1060.83,
+   "revenue": 2687.88,
+   "impressions": 136003,
+   "clicks": 1360,
+   "conversions": 33.2
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 67,
+   "spend": 1131.55,
+   "revenue": 2867.07,
+   "impressions": 145070,
+   "clicks": 1450,
+   "conversions": 35.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 68,
+   "spend": 1060.83,
+   "revenue": 2687.88,
+   "impressions": 136003,
+   "clicks": 1360,
+   "conversions": 33.2
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 69,
+   "spend": 1060.83,
+   "revenue": 2687.88,
+   "impressions": 136003,
+   "clicks": 1360,
+   "conversions": 33.2
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 70,
+   "spend": 718.84,
+   "revenue": 1641.19,
+   "impressions": 92158,
+   "clicks": 921,
+   "conversions": 20.3
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 71,
+   "spend": 778.76,
+   "revenue": 1777.96,
+   "impressions": 99841,
+   "clicks": 998,
+   "conversions": 22.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 72,
+   "spend": 838.66,
+   "revenue": 1914.73,
+   "impressions": 107520,
+   "clicks": 1075,
+   "conversions": 23.6
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 73,
+   "spend": 898.57,
+   "revenue": 2051.5,
+   "impressions": 115201,
+   "clicks": 1152,
+   "conversions": 25.3
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 74,
+   "spend": 958.47,
+   "revenue": 2188.26,
+   "impressions": 122880,
+   "clicks": 1228,
+   "conversions": 27.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 75,
+   "spend": 898.57,
+   "revenue": 2051.5,
+   "impressions": 115201,
+   "clicks": 1152,
+   "conversions": 25.3
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 76,
+   "spend": 898.57,
+   "revenue": 2051.5,
+   "impressions": 115201,
+   "clicks": 1152,
+   "conversions": 25.3
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 77,
+   "spend": 591.64,
+   "revenue": 1278.02,
+   "impressions": 75851,
+   "clicks": 758,
+   "conversions": 15.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 78,
+   "spend": 640.94,
+   "revenue": 1384.53,
+   "impressions": 82171,
+   "clicks": 821,
+   "conversions": 17.1
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 79,
+   "spend": 690.24,
+   "revenue": 1491.04,
+   "impressions": 88492,
+   "clicks": 884,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 80,
+   "spend": 739.54,
+   "revenue": 1597.54,
+   "impressions": 94812,
+   "clicks": 948,
+   "conversions": 19.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 81,
+   "spend": 788.84,
+   "revenue": 1704.04,
+   "impressions": 101133,
+   "clicks": 1011,
+   "conversions": 21.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 82,
+   "spend": 739.54,
+   "revenue": 1597.54,
+   "impressions": 94812,
+   "clicks": 948,
+   "conversions": 19.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 83,
+   "spend": 739.54,
+   "revenue": 1597.54,
+   "impressions": 94812,
+   "clicks": 948,
+   "conversions": 19.7
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 84,
+   "spend": 754.24,
+   "revenue": 1734.23,
+   "impressions": 96697,
+   "clicks": 966,
+   "conversions": 21.4
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 85,
+   "spend": 817.08,
+   "revenue": 1878.75,
+   "impressions": 104753,
+   "clicks": 1047,
+   "conversions": 23.2
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 86,
+   "spend": 879.93,
+   "revenue": 2023.27,
+   "impressions": 112811,
+   "clicks": 1128,
+   "conversions": 25.0
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 87,
+   "spend": 942.78,
+   "revenue": 2167.79,
+   "impressions": 120869,
+   "clicks": 1208,
+   "conversions": 26.8
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 88,
+   "spend": 1005.63,
+   "revenue": 2312.31,
+   "impressions": 128926,
+   "clicks": 1289,
+   "conversions": 28.5
+  },
+  {
+   "creative_id": "static_v6",
+   "day_offset": 89,
+   "spend": 942.78,
+   "revenue": 2167.79,
+   "impressions": 120869,
+   "clicks": 1208,
+   "conversions": 26.8
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 0,
+   "spend": 1080.0,
+   "revenue": 1944.0,
+   "impressions": 180000,
+   "clicks": 3239,
+   "conversions": 30.4
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 1,
+   "spend": 1170.0,
+   "revenue": 2106.0,
+   "impressions": 195000,
+   "clicks": 3509,
+   "conversions": 32.9
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 2,
+   "spend": 1260.0,
+   "revenue": 2268.0,
+   "impressions": 210000,
+   "clicks": 3779,
+   "conversions": 35.4
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 3,
+   "spend": 1350.0,
+   "revenue": 2430.0,
+   "impressions": 225000,
+   "clicks": 4049,
+   "conversions": 38.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 4,
+   "spend": 1440.0,
+   "revenue": 2592.0,
+   "impressions": 240000,
+   "clicks": 4320,
+   "conversions": 40.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 5,
+   "spend": 1350.0,
+   "revenue": 2430.0,
+   "impressions": 225000,
+   "clicks": 4049,
+   "conversions": 38.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 6,
+   "spend": 1350.0,
+   "revenue": 2430.0,
+   "impressions": 225000,
+   "clicks": 4049,
+   "conversions": 38.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 7,
+   "spend": 1272.11,
+   "revenue": 2455.3,
+   "impressions": 212018,
+   "clicks": 3816,
+   "conversions": 38.4
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 8,
+   "spend": 1378.11,
+   "revenue": 2659.91,
+   "impressions": 229684,
+   "clicks": 4134,
+   "conversions": 41.6
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 9,
+   "spend": 1484.12,
+   "revenue": 2864.52,
+   "impressions": 247353,
+   "clicks": 4452,
+   "conversions": 44.8
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 10,
+   "spend": 1590.12,
+   "revenue": 3069.13,
+   "impressions": 265020,
+   "clicks": 4770,
+   "conversions": 48.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 11,
+   "spend": 1696.13,
+   "revenue": 3273.74,
+   "impressions": 282688,
+   "clicks": 5088,
+   "conversions": 51.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 12,
+   "spend": 1590.12,
+   "revenue": 3069.13,
+   "impressions": 265020,
+   "clicks": 4770,
+   "conversions": 48.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 13,
+   "spend": 1590.12,
+   "revenue": 3069.13,
+   "impressions": 265020,
+   "clicks": 4770,
+   "conversions": 48.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 14,
+   "spend": 1084.82,
+   "revenue": 1896.46,
+   "impressions": 180803,
+   "clicks": 3254,
+   "conversions": 29.6
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 15,
+   "spend": 1175.22,
+   "revenue": 2054.49,
+   "impressions": 195870,
+   "clicks": 3525,
+   "conversions": 32.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 16,
+   "spend": 1265.62,
+   "revenue": 2212.53,
+   "impressions": 210936,
+   "clicks": 3796,
+   "conversions": 34.6
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 17,
+   "spend": 1356.02,
+   "revenue": 2370.56,
+   "impressions": 226003,
+   "clicks": 4068,
+   "conversions": 37.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 18,
+   "spend": 1446.42,
+   "revenue": 2528.6,
+   "impressions": 241070,
+   "clicks": 4339,
+   "conversions": 39.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 19,
+   "spend": 1356.02,
+   "revenue": 2370.56,
+   "impressions": 226003,
+   "clicks": 4068,
+   "conversions": 37.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 20,
+   "spend": 1356.02,
+   "revenue": 2370.56,
+   "impressions": 226003,
+   "clicks": 4068,
+   "conversions": 37.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 21,
+   "spend": 886.66,
+   "revenue": 1438.95,
+   "impressions": 147776,
+   "clicks": 2659,
+   "conversions": 22.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 22,
+   "spend": 960.55,
+   "revenue": 1558.84,
+   "impressions": 160091,
+   "clicks": 2881,
+   "conversions": 24.4
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 23,
+   "spend": 1034.44,
+   "revenue": 1678.75,
+   "impressions": 172406,
+   "clicks": 3103,
+   "conversions": 26.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 24,
+   "spend": 1108.32,
+   "revenue": 1798.66,
+   "impressions": 184720,
+   "clicks": 3324,
+   "conversions": 28.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 25,
+   "spend": 1182.21,
+   "revenue": 1918.57,
+   "impressions": 197035,
+   "clicks": 3546,
+   "conversions": 30.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 26,
+   "spend": 1108.32,
+   "revenue": 1798.66,
+   "impressions": 184720,
+   "clicks": 3324,
+   "conversions": 28.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 27,
+   "spend": 1108.32,
+   "revenue": 1798.66,
+   "impressions": 184720,
+   "clicks": 3324,
+   "conversions": 28.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 28,
+   "spend": 1124.99,
+   "revenue": 1902.54,
+   "impressions": 187498,
+   "clicks": 3374,
+   "conversions": 29.7
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 29,
+   "spend": 1218.76,
+   "revenue": 2061.07,
+   "impressions": 203126,
+   "clicks": 3656,
+   "conversions": 32.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 30,
+   "spend": 1312.51,
+   "revenue": 2219.62,
+   "impressions": 218751,
+   "clicks": 3937,
+   "conversions": 34.7
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 31,
+   "spend": 1406.26,
+   "revenue": 2378.16,
+   "impressions": 234376,
+   "clicks": 4218,
+   "conversions": 37.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 32,
+   "spend": 1500.01,
+   "revenue": 2536.71,
+   "impressions": 250001,
+   "clicks": 4500,
+   "conversions": 39.6
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 33,
+   "spend": 1406.26,
+   "revenue": 2378.16,
+   "impressions": 234376,
+   "clicks": 4218,
+   "conversions": 37.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 34,
+   "spend": 1406.26,
+   "revenue": 2378.16,
+   "impressions": 234376,
+   "clicks": 4218,
+   "conversions": 37.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 35,
+   "spend": 1261.75,
+   "revenue": 2370.01,
+   "impressions": 210291,
+   "clicks": 3785,
+   "conversions": 37.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 36,
+   "spend": 1366.89,
+   "revenue": 2567.52,
+   "impressions": 227815,
+   "clicks": 4100,
+   "conversions": 40.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 37,
+   "spend": 1472.03,
+   "revenue": 2765.02,
+   "impressions": 245338,
+   "clicks": 4416,
+   "conversions": 43.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 38,
+   "spend": 1577.18,
+   "revenue": 2962.52,
+   "impressions": 262863,
+   "clicks": 4731,
+   "conversions": 46.3
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 39,
+   "spend": 1682.32,
+   "revenue": 3160.02,
+   "impressions": 280386,
+   "clicks": 5046,
+   "conversions": 49.4
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 40,
+   "spend": 1577.18,
+   "revenue": 2962.52,
+   "impressions": 262863,
+   "clicks": 4731,
+   "conversions": 46.3
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 41,
+   "spend": 1577.18,
+   "revenue": 2962.52,
+   "impressions": 262863,
+   "clicks": 4731,
+   "conversions": 46.3
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 42,
+   "spend": 988.17,
+   "revenue": 1956.52,
+   "impressions": 164695,
+   "clicks": 2964,
+   "conversions": 30.6
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 43,
+   "spend": 1070.51,
+   "revenue": 2119.57,
+   "impressions": 178418,
+   "clicks": 3211,
+   "conversions": 33.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 44,
+   "spend": 1152.85,
+   "revenue": 2282.61,
+   "impressions": 192141,
+   "clicks": 3458,
+   "conversions": 35.7
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 45,
+   "spend": 1235.2,
+   "revenue": 2445.65,
+   "impressions": 205866,
+   "clicks": 3705,
+   "conversions": 38.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 46,
+   "spend": 1317.55,
+   "revenue": 2608.7,
+   "impressions": 219591,
+   "clicks": 3952,
+   "conversions": 40.8
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 47,
+   "spend": 1235.2,
+   "revenue": 2445.65,
+   "impressions": 205866,
+   "clicks": 3705,
+   "conversions": 38.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 48,
+   "spend": 1235.2,
+   "revenue": 2445.65,
+   "impressions": 205866,
+   "clicks": 3705,
+   "conversions": 38.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 49,
+   "spend": 921.93,
+   "revenue": 1737.72,
+   "impressions": 153655,
+   "clicks": 2765,
+   "conversions": 27.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 50,
+   "spend": 998.75,
+   "revenue": 1882.54,
+   "impressions": 166458,
+   "clicks": 2996,
+   "conversions": 29.4
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 51,
+   "spend": 1075.58,
+   "revenue": 2027.35,
+   "impressions": 179263,
+   "clicks": 3226,
+   "conversions": 31.7
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 52,
+   "spend": 1152.4,
+   "revenue": 2172.16,
+   "impressions": 192066,
+   "clicks": 3457,
+   "conversions": 33.9
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 53,
+   "spend": 1229.23,
+   "revenue": 2316.97,
+   "impressions": 204871,
+   "clicks": 3687,
+   "conversions": 36.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 54,
+   "spend": 1152.4,
+   "revenue": 2172.16,
+   "impressions": 192066,
+   "clicks": 3457,
+   "conversions": 33.9
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 55,
+   "spend": 1152.4,
+   "revenue": 2172.16,
+   "impressions": 192066,
+   "clicks": 3457,
+   "conversions": 33.9
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 56,
+   "spend": 1212.57,
+   "revenue": 2057.8,
+   "impressions": 202095,
+   "clicks": 3637,
+   "conversions": 32.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 57,
+   "spend": 1313.62,
+   "revenue": 2229.29,
+   "impressions": 218936,
+   "clicks": 3940,
+   "conversions": 34.8
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 58,
+   "spend": 1414.67,
+   "revenue": 2400.77,
+   "impressions": 235778,
+   "clicks": 4244,
+   "conversions": 37.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 59,
+   "spend": 1515.72,
+   "revenue": 2572.25,
+   "impressions": 252620,
+   "clicks": 4547,
+   "conversions": 40.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 60,
+   "spend": 1616.76,
+   "revenue": 2743.74,
+   "impressions": 269460,
+   "clicks": 4850,
+   "conversions": 42.9
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 61,
+   "spend": 1515.72,
+   "revenue": 2572.25,
+   "impressions": 252620,
+   "clicks": 4547,
+   "conversions": 40.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 62,
+   "spend": 1515.72,
+   "revenue": 2572.25,
+   "impressions": 252620,
+   "clicks": 4547,
+   "conversions": 40.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 63,
+   "spend": 1203.92,
+   "revenue": 1952.39,
+   "impressions": 200653,
+   "clicks": 3611,
+   "conversions": 30.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 64,
+   "spend": 1304.24,
+   "revenue": 2115.1,
+   "impressions": 217373,
+   "clicks": 3912,
+   "conversions": 33.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 65,
+   "spend": 1404.57,
+   "revenue": 2277.8,
+   "impressions": 234095,
+   "clicks": 4213,
+   "conversions": 35.6
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 66,
+   "spend": 1504.89,
+   "revenue": 2440.51,
+   "impressions": 250815,
+   "clicks": 4514,
+   "conversions": 38.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 67,
+   "spend": 1605.22,
+   "revenue": 2603.21,
+   "impressions": 267536,
+   "clicks": 4815,
+   "conversions": 40.7
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 68,
+   "spend": 1504.89,
+   "revenue": 2440.51,
+   "impressions": 250815,
+   "clicks": 4514,
+   "conversions": 38.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 69,
+   "spend": 1504.89,
+   "revenue": 2440.51,
+   "impressions": 250815,
+   "clicks": 4514,
+   "conversions": 38.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 70,
+   "spend": 915.48,
+   "revenue": 1594.07,
+   "impressions": 152580,
+   "clicks": 2746,
+   "conversions": 24.9
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 71,
+   "spend": 991.79,
+   "revenue": 1726.9,
+   "impressions": 165298,
+   "clicks": 2975,
+   "conversions": 27.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 72,
+   "spend": 1068.08,
+   "revenue": 1859.74,
+   "impressions": 178013,
+   "clicks": 3204,
+   "conversions": 29.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 73,
+   "spend": 1144.37,
+   "revenue": 1992.58,
+   "impressions": 190728,
+   "clicks": 3433,
+   "conversions": 31.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 74,
+   "spend": 1220.66,
+   "revenue": 2125.42,
+   "impressions": 203443,
+   "clicks": 3661,
+   "conversions": 33.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 75,
+   "spend": 1144.37,
+   "revenue": 1992.58,
+   "impressions": 190728,
+   "clicks": 3433,
+   "conversions": 31.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 76,
+   "spend": 1144.37,
+   "revenue": 1992.58,
+   "impressions": 190728,
+   "clicks": 3433,
+   "conversions": 31.1
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 77,
+   "spend": 998.47,
+   "revenue": 1922.02,
+   "impressions": 166411,
+   "clicks": 2995,
+   "conversions": 30.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 78,
+   "spend": 1081.68,
+   "revenue": 2082.18,
+   "impressions": 180280,
+   "clicks": 3245,
+   "conversions": 32.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 79,
+   "spend": 1164.89,
+   "revenue": 2242.35,
+   "impressions": 194148,
+   "clicks": 3494,
+   "conversions": 35.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 80,
+   "spend": 1248.1,
+   "revenue": 2402.52,
+   "impressions": 208016,
+   "clicks": 3744,
+   "conversions": 37.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 81,
+   "spend": 1331.3,
+   "revenue": 2562.69,
+   "impressions": 221883,
+   "clicks": 3993,
+   "conversions": 40.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 82,
+   "spend": 1248.1,
+   "revenue": 2402.52,
+   "impressions": 208016,
+   "clicks": 3744,
+   "conversions": 37.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 83,
+   "spend": 1248.1,
+   "revenue": 2402.52,
+   "impressions": 208016,
+   "clicks": 3744,
+   "conversions": 37.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 84,
+   "spend": 1265.52,
+   "revenue": 2495.79,
+   "impressions": 210920,
+   "clicks": 3796,
+   "conversions": 39.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 85,
+   "spend": 1370.97,
+   "revenue": 2703.76,
+   "impressions": 228495,
+   "clicks": 4112,
+   "conversions": 42.2
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 86,
+   "spend": 1476.43,
+   "revenue": 2911.74,
+   "impressions": 246071,
+   "clicks": 4429,
+   "conversions": 45.5
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 87,
+   "spend": 1581.89,
+   "revenue": 3119.72,
+   "impressions": 263648,
+   "clicks": 4745,
+   "conversions": 48.7
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 88,
+   "spend": 1687.35,
+   "revenue": 3327.7,
+   "impressions": 281224,
+   "clicks": 5062,
+   "conversions": 52.0
+  },
+  {
+   "creative_id": "video_hook_a",
+   "day_offset": 89,
+   "spend": 1581.89,
+   "revenue": 3119.72,
+   "impressions": 263648,
+   "clicks": 4745,
+   "conversions": 48.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 0,
+   "spend": 360.0,
+   "revenue": 1098.0,
+   "impressions": 25714,
+   "clicks": 1157,
+   "conversions": 12.5
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 1,
+   "spend": 390.0,
+   "revenue": 1189.5,
+   "impressions": 27857,
+   "clicks": 1253,
+   "conversions": 13.5
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 2,
+   "spend": 420.0,
+   "revenue": 1281.0,
+   "impressions": 30000,
+   "clicks": 1350,
+   "conversions": 14.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 3,
+   "spend": 450.0,
+   "revenue": 1372.5,
+   "impressions": 32142,
+   "clicks": 1446,
+   "conversions": 15.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 4,
+   "spend": 480.0,
+   "revenue": 1464.0,
+   "impressions": 34285,
+   "clicks": 1542,
+   "conversions": 16.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 5,
+   "spend": 450.0,
+   "revenue": 1372.5,
+   "impressions": 32142,
+   "clicks": 1446,
+   "conversions": 15.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 6,
+   "spend": 450.0,
+   "revenue": 1372.5,
+   "impressions": 32142,
+   "clicks": 1446,
+   "conversions": 15.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 7,
+   "spend": 402.96,
+   "revenue": 1106.51,
+   "impressions": 28782,
+   "clicks": 1295,
+   "conversions": 12.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 8,
+   "spend": 436.54,
+   "revenue": 1198.72,
+   "impressions": 31181,
+   "clicks": 1403,
+   "conversions": 13.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 9,
+   "spend": 470.12,
+   "revenue": 1290.93,
+   "impressions": 33580,
+   "clicks": 1511,
+   "conversions": 14.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 10,
+   "spend": 503.7,
+   "revenue": 1383.13,
+   "impressions": 35978,
+   "clicks": 1619,
+   "conversions": 15.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 11,
+   "spend": 537.28,
+   "revenue": 1475.34,
+   "impressions": 38377,
+   "clicks": 1726,
+   "conversions": 16.8
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 12,
+   "spend": 503.7,
+   "revenue": 1383.13,
+   "impressions": 35978,
+   "clicks": 1619,
+   "conversions": 15.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 13,
+   "spend": 503.7,
+   "revenue": 1383.13,
+   "impressions": 35978,
+   "clicks": 1619,
+   "conversions": 15.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 14,
+   "spend": 306.33,
+   "revenue": 885.59,
+   "impressions": 21880,
+   "clicks": 984,
+   "conversions": 10.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 15,
+   "spend": 331.89,
+   "revenue": 959.38,
+   "impressions": 23706,
+   "clicks": 1066,
+   "conversions": 10.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 16,
+   "spend": 357.42,
+   "revenue": 1033.18,
+   "impressions": 25530,
+   "clicks": 1148,
+   "conversions": 11.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 17,
+   "spend": 382.95,
+   "revenue": 1106.98,
+   "impressions": 27353,
+   "clicks": 1230,
+   "conversions": 12.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 18,
+   "spend": 408.48,
+   "revenue": 1180.78,
+   "impressions": 29177,
+   "clicks": 1312,
+   "conversions": 13.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 19,
+   "spend": 382.95,
+   "revenue": 1106.98,
+   "impressions": 27353,
+   "clicks": 1230,
+   "conversions": 12.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 20,
+   "spend": 382.95,
+   "revenue": 1106.98,
+   "impressions": 27353,
+   "clicks": 1230,
+   "conversions": 12.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 21,
+   "spend": 330.86,
+   "revenue": 1061.93,
+   "impressions": 23632,
+   "clicks": 1063,
+   "conversions": 12.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 22,
+   "spend": 358.43,
+   "revenue": 1150.41,
+   "impressions": 25602,
+   "clicks": 1152,
+   "conversions": 13.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 23,
+   "spend": 386.01,
+   "revenue": 1238.9,
+   "impressions": 27572,
+   "clicks": 1240,
+   "conversions": 14.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 24,
+   "spend": 413.58,
+   "revenue": 1327.39,
+   "impressions": 29541,
+   "clicks": 1329,
+   "conversions": 15.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 25,
+   "spend": 441.15,
+   "revenue": 1415.89,
+   "impressions": 31510,
+   "clicks": 1417,
+   "conversions": 16.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 26,
+   "spend": 413.58,
+   "revenue": 1327.39,
+   "impressions": 29541,
+   "clicks": 1329,
+   "conversions": 15.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 27,
+   "spend": 413.58,
+   "revenue": 1327.39,
+   "impressions": 29541,
+   "clicks": 1329,
+   "conversions": 15.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 28,
+   "spend": 421.15,
+   "revenue": 1412.57,
+   "impressions": 30082,
+   "clicks": 1353,
+   "conversions": 16.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 29,
+   "spend": 456.25,
+   "revenue": 1530.27,
+   "impressions": 32589,
+   "clicks": 1466,
+   "conversions": 17.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 30,
+   "spend": 491.34,
+   "revenue": 1647.98,
+   "impressions": 35095,
+   "clicks": 1579,
+   "conversions": 18.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 31,
+   "spend": 526.44,
+   "revenue": 1765.69,
+   "impressions": 37602,
+   "clicks": 1692,
+   "conversions": 20.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 32,
+   "spend": 561.54,
+   "revenue": 1883.41,
+   "impressions": 40110,
+   "clicks": 1804,
+   "conversions": 21.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 33,
+   "spend": 526.44,
+   "revenue": 1765.69,
+   "impressions": 37602,
+   "clicks": 1692,
+   "conversions": 20.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 34,
+   "spend": 526.44,
+   "revenue": 1765.69,
+   "impressions": 37602,
+   "clicks": 1692,
+   "conversions": 20.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 35,
+   "spend": 373.39,
+   "revenue": 1182.22,
+   "impressions": 26670,
+   "clicks": 1200,
+   "conversions": 13.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 36,
+   "spend": 404.49,
+   "revenue": 1280.74,
+   "impressions": 28892,
+   "clicks": 1300,
+   "conversions": 14.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 37,
+   "spend": 435.61,
+   "revenue": 1379.26,
+   "impressions": 31115,
+   "clicks": 1400,
+   "conversions": 15.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 38,
+   "spend": 466.72,
+   "revenue": 1477.78,
+   "impressions": 33337,
+   "clicks": 1500,
+   "conversions": 16.8
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 39,
+   "spend": 497.84,
+   "revenue": 1576.3,
+   "impressions": 35559,
+   "clicks": 1600,
+   "conversions": 17.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 40,
+   "spend": 466.72,
+   "revenue": 1477.78,
+   "impressions": 33337,
+   "clicks": 1500,
+   "conversions": 16.8
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 41,
+   "spend": 466.72,
+   "revenue": 1477.78,
+   "impressions": 33337,
+   "clicks": 1500,
+   "conversions": 16.8
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 42,
+   "spend": 295.4,
+   "revenue": 842.33,
+   "impressions": 21099,
+   "clicks": 949,
+   "conversions": 9.6
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 43,
+   "spend": 320.02,
+   "revenue": 912.52,
+   "impressions": 22858,
+   "clicks": 1028,
+   "conversions": 10.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 44,
+   "spend": 344.63,
+   "revenue": 982.71,
+   "impressions": 24616,
+   "clicks": 1107,
+   "conversions": 11.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 45,
+   "spend": 369.25,
+   "revenue": 1052.9,
+   "impressions": 26375,
+   "clicks": 1186,
+   "conversions": 12.0
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 46,
+   "spend": 393.87,
+   "revenue": 1123.1,
+   "impressions": 28133,
+   "clicks": 1265,
+   "conversions": 12.8
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 47,
+   "spend": 369.25,
+   "revenue": 1052.9,
+   "impressions": 26375,
+   "clicks": 1186,
+   "conversions": 12.0
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 48,
+   "spend": 369.25,
+   "revenue": 1052.9,
+   "impressions": 26375,
+   "clicks": 1186,
+   "conversions": 12.0
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 49,
+   "spend": 363.28,
+   "revenue": 1000.29,
+   "impressions": 25948,
+   "clicks": 1167,
+   "conversions": 11.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 50,
+   "spend": 393.54,
+   "revenue": 1083.65,
+   "impressions": 28110,
+   "clicks": 1264,
+   "conversions": 12.3
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 51,
+   "spend": 423.81,
+   "revenue": 1167.01,
+   "impressions": 30272,
+   "clicks": 1362,
+   "conversions": 13.3
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 52,
+   "spend": 454.08,
+   "revenue": 1250.37,
+   "impressions": 32434,
+   "clicks": 1459,
+   "conversions": 14.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 53,
+   "spend": 484.36,
+   "revenue": 1333.72,
+   "impressions": 34597,
+   "clicks": 1556,
+   "conversions": 15.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 54,
+   "spend": 454.08,
+   "revenue": 1250.37,
+   "impressions": 32434,
+   "clicks": 1459,
+   "conversions": 14.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 55,
+   "spend": 454.08,
+   "revenue": 1250.37,
+   "impressions": 32434,
+   "clicks": 1459,
+   "conversions": 14.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 56,
+   "spend": 423.75,
+   "revenue": 1262.66,
+   "impressions": 30267,
+   "clicks": 1362,
+   "conversions": 14.3
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 57,
+   "spend": 459.07,
+   "revenue": 1367.87,
+   "impressions": 32790,
+   "clicks": 1475,
+   "conversions": 15.5
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 58,
+   "spend": 494.38,
+   "revenue": 1473.09,
+   "impressions": 35312,
+   "clicks": 1589,
+   "conversions": 16.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 59,
+   "spend": 529.7,
+   "revenue": 1578.31,
+   "impressions": 37835,
+   "clicks": 1702,
+   "conversions": 17.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 60,
+   "spend": 565.01,
+   "revenue": 1683.53,
+   "impressions": 40357,
+   "clicks": 1816,
+   "conversions": 19.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 61,
+   "spend": 529.7,
+   "revenue": 1578.31,
+   "impressions": 37835,
+   "clicks": 1702,
+   "conversions": 17.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 62,
+   "spend": 529.7,
+   "revenue": 1578.31,
+   "impressions": 37835,
+   "clicks": 1702,
+   "conversions": 17.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 63,
+   "spend": 340.3,
+   "revenue": 1117.08,
+   "impressions": 24307,
+   "clicks": 1093,
+   "conversions": 12.7
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 64,
+   "spend": 368.66,
+   "revenue": 1210.16,
+   "impressions": 26332,
+   "clicks": 1184,
+   "conversions": 13.8
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 65,
+   "spend": 397.02,
+   "revenue": 1303.25,
+   "impressions": 28358,
+   "clicks": 1276,
+   "conversions": 14.8
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 66,
+   "spend": 425.38,
+   "revenue": 1396.34,
+   "impressions": 30384,
+   "clicks": 1367,
+   "conversions": 15.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 67,
+   "spend": 453.74,
+   "revenue": 1489.43,
+   "impressions": 32410,
+   "clicks": 1458,
+   "conversions": 16.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 68,
+   "spend": 425.38,
+   "revenue": 1396.34,
+   "impressions": 30384,
+   "clicks": 1367,
+   "conversions": 15.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 69,
+   "spend": 425.38,
+   "revenue": 1396.34,
+   "impressions": 30384,
+   "clicks": 1367,
+   "conversions": 15.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 70,
+   "spend": 301.31,
+   "revenue": 1003.82,
+   "impressions": 21522,
+   "clicks": 968,
+   "conversions": 11.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 71,
+   "spend": 326.43,
+   "revenue": 1087.44,
+   "impressions": 23316,
+   "clicks": 1049,
+   "conversions": 12.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 72,
+   "spend": 351.54,
+   "revenue": 1171.09,
+   "impressions": 25110,
+   "clicks": 1129,
+   "conversions": 13.3
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 73,
+   "spend": 376.65,
+   "revenue": 1254.74,
+   "impressions": 26903,
+   "clicks": 1210,
+   "conversions": 14.3
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 74,
+   "spend": 401.76,
+   "revenue": 1338.39,
+   "impressions": 28697,
+   "clicks": 1291,
+   "conversions": 15.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 75,
+   "spend": 376.65,
+   "revenue": 1254.74,
+   "impressions": 26903,
+   "clicks": 1210,
+   "conversions": 14.3
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 76,
+   "spend": 376.65,
+   "revenue": 1254.74,
+   "impressions": 26903,
+   "clicks": 1210,
+   "conversions": 14.3
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 77,
+   "spend": 394.83,
+   "revenue": 1213.15,
+   "impressions": 28202,
+   "clicks": 1269,
+   "conversions": 13.8
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 78,
+   "spend": 427.72,
+   "revenue": 1314.23,
+   "impressions": 30551,
+   "clicks": 1374,
+   "conversions": 14.9
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 79,
+   "spend": 460.62,
+   "revenue": 1415.33,
+   "impressions": 32901,
+   "clicks": 1480,
+   "conversions": 16.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 80,
+   "spend": 493.52,
+   "revenue": 1516.42,
+   "impressions": 35251,
+   "clicks": 1586,
+   "conversions": 17.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 81,
+   "spend": 526.42,
+   "revenue": 1617.52,
+   "impressions": 37601,
+   "clicks": 1692,
+   "conversions": 18.4
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 82,
+   "spend": 493.52,
+   "revenue": 1516.42,
+   "impressions": 35251,
+   "clicks": 1586,
+   "conversions": 17.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 83,
+   "spend": 493.52,
+   "revenue": 1516.42,
+   "impressions": 35251,
+   "clicks": 1586,
+   "conversions": 17.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 84,
+   "spend": 409.7,
+   "revenue": 1142.79,
+   "impressions": 29264,
+   "clicks": 1316,
+   "conversions": 13.0
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 85,
+   "spend": 443.85,
+   "revenue": 1237.99,
+   "impressions": 31703,
+   "clicks": 1426,
+   "conversions": 14.1
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 86,
+   "spend": 477.99,
+   "revenue": 1333.22,
+   "impressions": 34142,
+   "clicks": 1536,
+   "conversions": 15.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 87,
+   "spend": 512.14,
+   "revenue": 1428.45,
+   "impressions": 36581,
+   "clicks": 1646,
+   "conversions": 16.2
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 88,
+   "spend": 546.28,
+   "revenue": 1523.68,
+   "impressions": 39019,
+   "clicks": 1755,
+   "conversions": 17.3
+  },
+  {
+   "creative_id": "rsa_brand_core",
+   "day_offset": 89,
+   "spend": 512.14,
+   "revenue": 1428.45,
+   "impressions": 36581,
+   "clicks": 1646,
+   "conversions": 16.2
+  }
+ ]
+}

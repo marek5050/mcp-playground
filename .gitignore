@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/
+.DS_Store
+dist/
+*.egg-info/
+# never commit service-account or OAuth secrets
+*service-account*.json
+sa.json
