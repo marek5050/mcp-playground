@@ -13,6 +13,7 @@ the wiring:
 
 from __future__ import annotations
 
+import mcp.types as mcp_types
 from fastmcp import FastMCP
 from starlette.applications import Starlette
 from starlette.middleware import Middleware
@@ -35,7 +36,19 @@ def build_mcp(settings: Settings) -> FastMCP:
     auth = None
     if settings.auth_mode == "required":
         auth = _google_provider(settings)
-    mcp = FastMCP("playground", instructions=INSTRUCTIONS, auth=auth)
+    mcp = FastMCP(
+        "playground",
+        instructions=INSTRUCTIONS,
+        auth=auth,
+        website_url="https://mcpbuilders.dev",
+        icons=[
+            mcp_types.Icon(
+                src="https://mcpbuilders.dev/assets/google-auth-icon-512.png",
+                mimeType="image/png",
+                sizes=["512x512"],
+            )
+        ],
+    )
     campaigns.register(mcp)
     gated.register(mcp)
 
