@@ -12,9 +12,50 @@ Authorization header pass through anonymously.
 from __future__ import annotations
 
 from mcp.server.auth.middleware.bearer_auth import AuthenticatedUser
+from mcp.server.auth.provider import AccessToken
+from starlette.authentication import AuthCredentials
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 from starlette.types import ASGIApp, Receive, Scope, Send
+
+
+API_KEY_CLIENT_ID = "api-key"
+API_KEY_SUBJECT = "api-key-user"
+
+
+class ApiKeyAuthMiddleware:
+    """Accepts ``Authorization: Bearer <api_key>`` as a synthetic authenticated user.
+
+    Runs after the OAuth provider's AuthenticationMiddleware (which will have
+    failed to verify the static key as a JWT) and before any require-auth check.
+    If the presented bearer matches the configured key, we populate ``scope['user']``
+    and ``scope['auth']`` so gated tools and RequireAuthMiddleware both see an
+    authenticated caller.
+    """
+
+    def __init__(self, app: ASGIApp, api_key: str, scopes: list[str]):
+        self.app = app
+        self.api_key = api_key
+        self.scopes = scopes
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] == "http" and self.api_key and not isinstance(
+            scope.get("user"), AuthenticatedUser
+        ):
+            header = Request(scope).headers.get("authorization", "")
+            if header.lower().startswith("bearer "):
+                token = header.split(" ", 1)[1].strip()
+                if token == self.api_key:
+                    access_token = AccessToken(
+                        token=token,
+                        client_id=API_KEY_CLIENT_ID,
+                        scopes=list(self.scopes),
+                        subject=API_KEY_SUBJECT,
+                        claims={"sub": API_KEY_SUBJECT, "email": "api-key@playground"},
+                    )
+                    scope["user"] = AuthenticatedUser(access_token)
+                    scope["auth"] = AuthCredentials(scopes=list(self.scopes))
+        await self.app(scope, receive, send)
 
 
 class OptionalAuthMiddleware:

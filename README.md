@@ -96,7 +96,7 @@ totals reproduce the numbers advertised on mcpbuilders.dev exactly.
 ```bash
 gcloud run deploy mcp-playground --source . \
   --project mcp-builders --region us-central1 \
-  --allow-unauthenticated --min-instances 1 --max-instances 1 \
+  --allow-unauthenticated --min-instances 0 --max-instances 1 \
   --set-env-vars BASE_URL=https://playground.mcpbuilders.dev,AUTH_MODE=mixed,GOOGLE_OAUTH_CLIENT_ID=... \
   --set-secrets GOOGLE_OAUTH_CLIENT_SECRET=playground-oauth-secret:latest
 

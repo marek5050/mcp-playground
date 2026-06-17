@@ -55,6 +55,7 @@ def base_url(monkeypatch_module):
         auth_mode="mixed",
         google_oauth_client_id="dummy.apps.googleusercontent.com",
         google_oauth_client_secret="GOCSPX-dummy",
+        api_key="ABCDEF",
     )
     monkeypatch_module.setattr(
         server_mod,

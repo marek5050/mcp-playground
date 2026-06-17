@@ -21,6 +21,7 @@ class Settings:
     auth_mode: AuthMode
     google_oauth_client_id: str
     google_oauth_client_secret: str
+    api_key: str
 
     @property
     def auth_enabled(self) -> bool:
@@ -38,6 +39,7 @@ def load_settings() -> Settings:
         auth_mode=auth_mode,
         google_oauth_client_id=os.environ.get("GOOGLE_OAUTH_CLIENT_ID", ""),
         google_oauth_client_secret=os.environ.get("GOOGLE_OAUTH_CLIENT_SECRET", ""),
+        api_key=os.environ.get("PLAYGROUND_API_KEY", "ABCDEF"),
     )
     if settings.auth_enabled and not (
         settings.google_oauth_client_id and settings.google_oauth_client_secret
