@@ -21,7 +21,11 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 
 from playground.config import Settings, load_settings
-from playground.middleware import ApiKeyAuthMiddleware, OptionalAuthMiddleware
+from playground.middleware import (
+    ApiKeyAuthMiddleware,
+    OptionalAuthMiddleware,
+    RequireAuthenticatedUser,
+)
 from playground.tools import campaigns, gated
 
 GOOGLE_OAUTH_SCOPES = ["openid", "email"]
@@ -35,13 +39,13 @@ per-user OAuth: they require Google sign-in and scope data to your identity.
 
 
 def build_mcp(settings: Settings) -> FastMCP:
-    auth = None
-    if settings.auth_mode == "required":
-        auth = _google_provider(settings)
+    # We always wire auth externally in build_app so the API-key path stays
+    # independent of the OAuth provider's required_scopes. FastMCP's own auth=
+    # plumbing would install RequireAuthMiddleware with Google scopes baked in.
     mcp = FastMCP(
         "playground",
         instructions=INSTRUCTIONS,
-        auth=auth,
+        auth=None,
         website_url="https://mcpbuilders.dev",
         icons=[
             mcp_types.Icon(
@@ -75,39 +79,29 @@ def _google_provider(settings: Settings):
 def build_app(settings: Settings | None = None) -> Starlette:
     settings = settings or load_settings()
     mcp = build_mcp(settings)
-    # GoogleProvider expands "email" to the full Google scope URL; mirror its
-    # required_scopes so a matching API key satisfies RequireAuthMiddleware.
-    api_key_scopes = (
-        list(mcp.auth.required_scopes) if mcp.auth else list(GOOGLE_OAUTH_SCOPES)
-    )
-    api_key_mw = Middleware(
-        ApiKeyAuthMiddleware,
-        api_key=settings.api_key,
-        scopes=api_key_scopes,
-    )
+    api_key_mw = Middleware(ApiKeyAuthMiddleware, api_key=settings.api_key)
 
-    if settings.auth_mode != "mixed":
-        # off: plain app; required: FastMCP wires enforcement + OAuth routes itself.
-        # The API-key middleware runs after OAuth verification (if any) and before
-        # RequireAuthMiddleware, so a matching key satisfies the require-auth check.
+    if settings.auth_mode == "off":
+        # No auth wiring; API-key middleware still recognized for gated tools.
         return mcp.http_app(path="/mcp", middleware=[api_key_mw])
 
-    # mixed: token verification WITHOUT enforcement. The provider's middleware
-    # populates the auth context when a Bearer token is present but never
-    # rejects anonymous requests (rejection lives in RequireAuthMiddleware,
-    # which only FastMCP(auth=...) installs).
     provider = _google_provider(settings)
     resource_metadata_url = f"{settings.base_url}/.well-known/oauth-protected-resource/mcp"
-    mixed_api_key_mw = Middleware(
-        ApiKeyAuthMiddleware,
-        api_key=settings.api_key,
-        scopes=list(provider.required_scopes),
-    )
-    middleware = [
-        *provider.get_middleware(),
-        mixed_api_key_mw,
-        Middleware(OptionalAuthMiddleware, resource_metadata_url=resource_metadata_url),
-    ]
+    middleware: list[Middleware] = [*provider.get_middleware(), api_key_mw]
+
+    if settings.auth_mode == "required":
+        # Custom require-auth: accepts any AuthenticatedUser (OAuth OR API key);
+        # no scope check, so the API-key path doesn't have to carry Google scopes.
+        middleware.append(
+            Middleware(RequireAuthenticatedUser, resource_metadata_url=resource_metadata_url)
+        )
+    else:
+        # mixed: anonymous allowed; 401 only when a Bearer token is presented
+        # but failed BOTH Google verification AND the API-key check.
+        middleware.append(
+            Middleware(OptionalAuthMiddleware, resource_metadata_url=resource_metadata_url)
+        )
+
     app = mcp.http_app(path="/mcp", middleware=middleware)
     # discovery docs + /register + /authorize + /token + /auth/callback
     app.router.routes.extend(provider.get_routes(mcp_path="/mcp"))
