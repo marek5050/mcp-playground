@@ -22,9 +22,9 @@ from starlette.responses import JSONResponse
 
 from playground.config import Settings, load_settings
 from playground.middleware import ApiKeyAuthMiddleware, OptionalAuthMiddleware
+from playground.tools import campaigns, gated
 
 GOOGLE_OAUTH_SCOPES = ["openid", "email"]
-from playground.tools import campaigns, gated
 
 INSTRUCTIONS = """\
 Public playground MCP server from mcpbuilders.dev. Read-only demo MarTech
@@ -67,17 +67,23 @@ def _google_provider(settings: Settings):
     return GoogleProvider(
         client_id=settings.google_oauth_client_id,
         client_secret=settings.google_oauth_client_secret,
-        base_url=settings.base_url,        required_scopes=GOOGLE_OAUTH_SCOPES,
+        base_url=settings.base_url,
+        required_scopes=GOOGLE_OAUTH_SCOPES,
     )
 
 
 def build_app(settings: Settings | None = None) -> Starlette:
     settings = settings or load_settings()
     mcp = build_mcp(settings)
+    # GoogleProvider expands "email" to the full Google scope URL; mirror its
+    # required_scopes so a matching API key satisfies RequireAuthMiddleware.
+    api_key_scopes = (
+        list(mcp.auth.required_scopes) if mcp.auth else list(GOOGLE_OAUTH_SCOPES)
+    )
     api_key_mw = Middleware(
         ApiKeyAuthMiddleware,
         api_key=settings.api_key,
-        scopes=GOOGLE_OAUTH_SCOPES,
+        scopes=api_key_scopes,
     )
 
     if settings.auth_mode != "mixed":
@@ -92,9 +98,14 @@ def build_app(settings: Settings | None = None) -> Starlette:
     # which only FastMCP(auth=...) installs).
     provider = _google_provider(settings)
     resource_metadata_url = f"{settings.base_url}/.well-known/oauth-protected-resource/mcp"
+    mixed_api_key_mw = Middleware(
+        ApiKeyAuthMiddleware,
+        api_key=settings.api_key,
+        scopes=list(provider.required_scopes),
+    )
     middleware = [
         *provider.get_middleware(),
-        api_key_mw,
+        mixed_api_key_mw,
         Middleware(OptionalAuthMiddleware, resource_metadata_url=resource_metadata_url),
     ]
     app = mcp.http_app(path="/mcp", middleware=middleware)
