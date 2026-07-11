@@ -3,7 +3,7 @@
 The public playground MCP server behind [mcpbuilders.dev](https://mcpbuilders.dev) —
 `https://playground.mcpbuilders.dev/mcp`. Two demos in one:
 
-1. A read-only **MarTech dataset** (campaigns, creatives, 90 days of daily
+1. A read-only **campaigns dataset** (campaigns, creatives, 90 days of daily
    spend) plus per-user tools that showcase the thing mcpbuilders sells:
    per-user OAuth on an MCP server.
 2. A hybrid **RAG** demo over a public-domain Project Gutenberg corpus
