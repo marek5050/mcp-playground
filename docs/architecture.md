@@ -1,121 +1,53 @@
 # Architecture
 
-Two subsystems share one FastMCP process behind Cloud Run: a read-only
-campaigns dataset (with optional per-user Google OAuth for saved views) and
-a hybrid RAG demo over public-domain books.
+One FastMCP server behind Cloud Run. Two demos share the process: a read-only
+campaigns dataset (with optional Google sign-in for saved views) and a hybrid
+RAG demo over public-domain books.
 
-## System view
-
-```mermaid
-flowchart LR
-    subgraph Clients["MCP Clients"]
-        CD[Claude Desktop]
-        CC[Claude Code]
-        INS[MCP Inspector]
-    end
-
-    subgraph CloudRun["Cloud Run · playground.mcpbuilders.dev/mcp"]
-        direction TB
-        MW[OptionalAuthMiddleware<br/>mixed-mode 401 handling]
-        GP[FastMCP GoogleProvider<br/>OAuth proxy · RFC 9728/8414/7591]
-        subgraph Tools["MCP Tools"]
-            direction TB
-            ANON[Anonymous<br/>top_creatives · spend_breakdown<br/>list_campaigns · rag_query<br/>list_documents · get_document]
-            AUTH[Google sign-in<br/>save_view · my_views]
-        end
-        DATA[(Campaigns dataset<br/>in-memory)]
-        VIEWS[(VIEWS<br/>in-memory)]
-        CORPUS[(Corpus + bm25_index.json<br/>on-disk)]
-    end
-
-    subgraph External["External Services"]
-        GOOG[Google OAuth]
-        GEM[Gemini Embeddings]
-        PINE[Pinecone<br/>dense index]
-        COH[Cohere Rerank]
-    end
-
-    Clients -->|HTTPS · MCP| MW
-    MW --> GP
-    GP -.->|verify Bearer| GOOG
-    GP --> Tools
-    ANON --> DATA
-    AUTH --> VIEWS
-    ANON -->|rag_query| CORPUS
-    ANON -->|rag_query| GEM
-    ANON -->|rag_query| PINE
-    ANON -->|rag_query| COH
-```
-
-### Auth flow (mixed mode)
-
-- Anonymous request → `OptionalAuthMiddleware` lets it through → tool runs.
-- Request with a valid Bearer token → `GoogleProvider` middleware verifies
-  against Google, attaches identity → gated tool sees the caller.
-- Request with an invalid/expired token → `401 + WWW-Authenticate` so the
-  client auto-triggers the sign-in flow.
-- Discovery / dynamic client registration / `/auth/callback` are all mounted
-  by FastMCP's `GoogleProvider` — no custom auth server code lives here.
-
-## RAG pipeline
+## System
 
 ```mermaid
 flowchart LR
-    Q[query string] --> EMB[Gemini<br/>gemini-embedding-001<br/>768-dim]
-    Q --> TOK[whitespace tokenize]
-    EMB --> PC[Pinecone<br/>cosine top-k×2]
-    TOK --> BM[BM25Okapi<br/>top-k×2]
-    PC --> RRF[Reciprocal Rank Fusion<br/>k=60]
-    BM --> RRF
-    RRF --> RR[Cohere rerank-v3.5<br/>top-k]
-    RR --> OUT[ranked chunks<br/>+ doc metadata]
-
-    subgraph Offline["playground-rag-build (one-shot)"]
-        MAN[manifest.json] --> LOAD[load_chunks<br/>strip GB header/footer<br/>paragraph pack 2500ch/250 overlap]
-        LOAD --> UPSERT[embed + upsert<br/>batches of 20]
-        LOAD --> DUMP[write bm25_index.json]
-        UPSERT --> PC
-    end
+    Client[MCP Client] -->|HTTPS| Server[Playground Server]
+    Server --> Campaigns[Campaigns Dataset]
+    Server --> RAG[Hybrid RAG]
+    Server -. sign-in .-> Google[Google OAuth]
+    RAG --> Pinecone
+    RAG --> Cohere
 ```
 
-### Runtime path (`rag_query`)
+- **Anonymous** tools serve the campaigns dataset and the RAG queries.
+- **Google sign-in** gates the per-user tools (`save_view`, `my_views`).
+- Cloud Run runs a single instance; state (dataset, saved views, OAuth
+  registrations) lives in memory.
 
-1. Embed the query with Gemini (`GoogleGenerativeAIEmbeddings`,
-   768-dim to match the index).
-2. In parallel-ish: Pinecone cosine similarity search for `k×2` dense hits;
-   `BM25Okapi.get_scores()` over the in-memory tokenized corpus for `k×2`
-   sparse hits.
-3. Reciprocal Rank Fusion with `k=60` merges the two ranked lists into a
-   unified candidate set (~2k candidates deduped).
-4. Cohere `rerank-v3.5` scores candidates against the query; top `k` win.
-5. Return chunks with `{doc_id, title, author, chunk_index, source_url}`.
+## RAG
 
-### Offline path (`playground-rag-build`)
+```mermaid
+flowchart LR
+    Query --> Dense[Pinecone dense]
+    Query --> Sparse[BM25 sparse]
+    Dense --> Fuse[Rank fusion]
+    Sparse --> Fuse
+    Fuse --> Rerank[Cohere rerank]
+    Rerank --> Top[Top-k chunks]
+```
 
-1. Read `manifest.json`, load each book's text, strip Project Gutenberg
-   header/footer via regex.
-2. Paragraph-aware greedy pack into ~2500-char chunks with 250-char tail
-   overlap (`corpus.py:50`).
-3. Embed and upsert to Pinecone in batches of 20 with 1.5s sleeps to stay
-   under Gemini embedding RPM quotas; retry up to 6 times on transient errors.
-4. Persist the tokenized corpus + metadata to `bm25_index.json` next to the
-   corpus files. This file is checked into git so the Docker image serves
-   queries without needing API keys at build time.
+- **Offline** (`playground-rag-build`): chunk the corpus, embed to Pinecone,
+  write `bm25_index.json` next to the corpus. The BM25 file is committed so
+  the deployed image serves queries without needing API keys at build time.
+- **Runtime**: query hits both retrievers in parallel, results fuse, Cohere
+  reranks, top *k* chunks come back with `{doc_id, title, author, source_url}`.
 
-The build is **not incremental**: adding one book re-embeds the whole corpus.
-Fine at four books, worth revisiting at forty.
+## Storage
 
-## Storage summary
+| Store | Backend | Lifetime |
+|---|---|---|
+| Campaigns dataset | in-memory | process |
+| Saved views | in-memory dict | process |
+| OAuth registrations / tokens | in-memory | process |
+| Corpus + BM25 index | on-disk (in image) | image |
+| Dense vectors | Pinecone (remote) | account |
 
-| Store | Backend | Lifetime | Notes |
-|---|---|---|---|
-| Campaigns dataset | in-memory | process | Generated by `playground.data.generate`; deterministic. |
-| Saved views (`VIEWS`) | in-memory dict | process | Cleared on restart — playground semantics. |
-| OAuth client registrations / tokens | in-memory (default) | process | Upgrade path: pass `client_storage=<AsyncKeyValue>` to `GoogleProvider`. |
-| BM25 sparse index | JSON on disk | image | Rebuilt by `playground-rag-build`, checked into git. |
-| Corpus text | plain `.txt` on disk | image | Public-domain Gutenberg files. |
-| Dense vectors | Pinecone (remote) | account | Populated by `playground-rag-build`. |
-
-`--max-instances 1` on Cloud Run is load-bearing because of the in-memory
-stores. Restart == re-register + re-authenticate for clients, saved views
-lost.
+Restart = clients re-register and re-authenticate, saved views forgotten.
+Acceptable for a playground.

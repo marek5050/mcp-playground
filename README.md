@@ -16,6 +16,20 @@ The public playground MCP server behind [mcpbuilders.dev](https://mcpbuilders.de
 $ claude mcp add --transport http playground https://playground.mcpbuilders.dev/mcp
 ```
 
+## Architecture
+
+```mermaid
+flowchart LR
+    Client[MCP Client] -->|HTTPS| Server[Playground Server]
+    Server --> Campaigns[Campaigns Dataset]
+    Server --> RAG[Hybrid RAG]
+    Server -. sign-in .-> Google[Google OAuth]
+    RAG --> Pinecone
+    RAG --> Cohere
+```
+
+See [docs/architecture.md](docs/architecture.md) for more detail.
+
 ## Tools
 
 | Tool | Auth | What it does |
@@ -36,8 +50,8 @@ token returns sign-in instructions instead of hiding them from `tools/list`.
 
 OAuth is handled entirely by FastMCP's stock
 [`GoogleProvider`](https://gofastmcp.com/servers/auth/oauth-proxy) — an OAuth
-proxy that implements the MCP authorization spec (RFC 9728/8414 discovery,
-RFC 7591 dynamic client registration, PKCE, `/auth/callback`) against a Google
+ proxy that implements the MCP authorization spec (discovery, dynamic client
+registration, PKCE, `/auth/callback`) against a Google
 OAuth web client from the `mcp-builders` GCP project. No custom authorization
 server code lives in this repo. Users sign in on Google's own consent screen.
 
