@@ -1,0 +1,17 @@
+# Build hygiene for `gcloud run deploy --source .` (uploads context to Cloud Build).
+.git
+.venv
+.idea
+.vscode
+.pytest_cache
+__pycache__/
+**/__pycache__
+*.pyc
+.env
+.env.*
+!.env.example
+tests/
+*.log
+.DS_Store
+# Local client credentials JSON is only for local flows, don't ship it.
+client_secret_*.json

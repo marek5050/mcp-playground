@@ -56,6 +56,12 @@ def base_url(monkeypatch_module):
         google_oauth_client_id="dummy.apps.googleusercontent.com",
         google_oauth_client_secret="GOCSPX-dummy",
         api_key="ABCDEF",
+        google_api_key="",
+        cohere_api_key="",
+        pinecone_api_key="",
+        pinecone_index="playground-rag-test",
+        pinecone_cloud="aws",
+        pinecone_region="us-east-1",
     )
     monkeypatch_module.setattr(
         server_mod,
@@ -133,7 +139,14 @@ async def test_anonymous_can_list_and_call_open_tools(base_url):
     async with Client(f"{base_url}/mcp") as client:
         tools = sorted(t.name for t in await client.list_tools())
         assert tools == [
-            "list_campaigns", "my_views", "save_view", "spend_breakdown", "top_creatives",
+            "get_document",
+            "list_campaigns",
+            "list_documents",
+            "my_views",
+            "rag_query",
+            "save_view",
+            "spend_breakdown",
+            "top_creatives",
         ]
         result = await client.call_tool("top_creatives", {"window": "7d", "limit": 3})
         rows = [(c["creative_id"], c["roas"], c["spend"]) for c in result.data["creatives"]]

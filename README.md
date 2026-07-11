@@ -1,9 +1,16 @@
 # mcp-playground
 
 The public playground MCP server behind [mcpbuilders.dev](https://mcpbuilders.dev) —
-`https://playground.mcpbuilders.dev/mcp`. A read-only demo MarTech dataset
-(campaigns, creatives, 90 days of daily spend) plus per-user tools that
-showcase the thing mcpbuilders sells: per-user OAuth on an MCP server.
+`https://playground.mcpbuilders.dev/mcp`. Two demos in one:
+
+1. A read-only **MarTech dataset** (campaigns, creatives, 90 days of daily
+   spend) plus per-user tools that showcase the thing mcpbuilders sells:
+   per-user OAuth on an MCP server.
+2. A hybrid **RAG** demo over a public-domain Project Gutenberg corpus
+   (*Moby Dick*, *The Adventures of Sherlock Holmes*, *A Study in Scarlet*,
+   *The Hound of the Baskervilles*) — Pinecone dense retrieval + BM25 sparse
+   + Reciprocal Rank Fusion + Cohere rerank. Same stack as
+   [citrini_rag](https://github.com/marek-bejda/citrini_rag), generalized.
 
 ```
 $ claude mcp add --transport http playground https://playground.mcpbuilders.dev/mcp
@@ -18,6 +25,9 @@ $ claude mcp add --transport http playground https://playground.mcpbuilders.dev/
 | `list_campaigns()` | anonymous | All campaigns with creatives and 90d totals |
 | `save_view(name, tool, params)` | Google sign-in | Save a named query view, scoped to YOUR identity |
 | `my_views()` | Google sign-in | List only the caller's saved views |
+| `rag_query(query, k)` | anonymous | Hybrid retrieval over the Gutenberg corpus (dense + BM25 + rerank) |
+| `list_documents()` | anonymous | Corpus manifest — titles, authors, source URLs |
+| `get_document(id, max_chars)` | anonymous | Full text of one book by id |
 
 The gated tools stay visible to anonymous clients; calling them without a
 token returns sign-in instructions instead of hiding them from `tools/list`.
@@ -61,6 +71,32 @@ through this.
    - `https://playground.mcpbuilders.dev/auth/callback`
    - `http://localhost:8080/auth/callback` (local dev)
 3. Put the client ID + secret in `.env` (copy `.env.example`).
+
+### Hybrid RAG (optional)
+
+The RAG tools require `GOOGLE_API_KEY` (Gemini embeddings), `COHERE_API_KEY`
+(reranker), and `PINECONE_API_KEY` (dense index) in `.env`. Optional
+`PINECONE_INDEX` / `PINECONE_CLOUD` / `PINECONE_REGION` override the defaults
+(`playground-rag` / `aws` / `us-east-1`). Missing keys don't break the
+server — only the RAG tools return a clear error at call time. Build the
+index once:
+
+```bash
+uv run playground-rag-build   # embeds the corpus to Pinecone, writes bm25_index.json
+```
+
+`bm25_index.json` is the persisted sparse-retrieval side of the pipeline —
+it's checked into the repo so the deployed image serves queries without
+needing API keys at build time. Rebuild it after any corpus change.
+
+Corpus lives in [`src/playground/data/corpus/`](src/playground/data/corpus/).
+Refresh with any Project Gutenberg book:
+
+```bash
+curl -sSL -o src/playground/data/corpus/<slug>.txt \
+  https://www.gutenberg.org/cache/epub/<id>/pg<id>.txt
+# ...then add the entry to manifest.json and re-run playground-rag-build
+```
 
 ### Local run
 
@@ -123,3 +159,9 @@ and move `VIEWS` to Firestore.
   which must be re-verified before upgrading.
 - The site copy shows `campaigns.top_creatives`; the actual MCP tool names
   have no `campaigns.` prefix (MCP tool-name charset).
+
+## License
+
+MIT — see [LICENSE](LICENSE). The corpus files under
+`src/playground/data/corpus/` are public-domain Project Gutenberg texts
+(see `manifest.json` for source URLs).

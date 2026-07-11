@@ -26,15 +26,19 @@ from playground.middleware import (
     OptionalAuthMiddleware,
     RequireAuthenticatedUser,
 )
-from playground.tools import campaigns, gated
+from playground.tools import campaigns, gated, rag
 
 GOOGLE_OAUTH_SCOPES = ["openid", "email"]
 
 INSTRUCTIONS = """\
-Public playground MCP server from mcpbuilders.dev. Read-only demo MarTech
-dataset (campaigns, creatives, daily spend). top_creatives, spend_breakdown,
-and list_campaigns work anonymously. save_view and my_views demonstrate
-per-user OAuth: they require Google sign-in and scope data to your identity.
+Public playground MCP server from mcpbuilders.dev. Two demos in one:
+
+1. Read-only MarTech dataset — top_creatives, spend_breakdown, list_campaigns
+   (anonymous), save_view + my_views (per-user Google OAuth).
+2. Hybrid RAG over a public-domain Project Gutenberg corpus (Moby Dick, The
+   Adventures of Sherlock Holmes) — rag_query, list_documents, get_document.
+   Same stack as citrini_rag: Pinecone dense + BM25 sparse + RRF + Cohere
+   rerank. Anonymous.
 """
 
 
@@ -57,6 +61,7 @@ def build_mcp(settings: Settings) -> FastMCP:
     )
     campaigns.register(mcp)
     gated.register(mcp)
+    rag.register(mcp, settings)
 
     @mcp.custom_route("/healthz", methods=["GET"], include_in_schema=False)
     async def healthz(_: Request) -> JSONResponse:
