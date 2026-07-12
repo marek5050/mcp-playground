@@ -92,17 +92,12 @@ dance — the user only sees "sign in with Google" pop up in the browser.
 <details>
 <summary>The <code>AUTH_MODE</code> switch</summary>
 
-Set in [server.py](src/playground/server.py). Three settings:
+Set in [server.py](src/playground/server.py). Two settings:
 
-- **`required`** — *(what production runs)* stock `FastMCP(auth=...)`
-  enforcement. Every request needs a token. Claude Desktop/Code auto-trigger
-  the Google sign-in flow on first connect.
-- **`mixed`** — anonymous tools work without a token; gated tools return
-  sign-in instructions.
-  [`OptionalAuthMiddleware`](src/playground/middleware.py) returns
-  `401 + WWW-Authenticate` only for *invalid* tokens so clients know to
-  re-authenticate. Useful if you want a public-read/private-write split.
-- **`off`** — no auth wiring. For local dataset hacking.
+- **`required`** — every request needs a valid
+ Google token. Claude Desktop/Code auto-trigger the sign-in flow on first
+  connect.
+- **`off`** — no auth wiring at all.
 
 </details>
 
@@ -134,7 +129,7 @@ In any GCP project of your own:
    - Your production `/auth/callback` URL if you deploy this.
 3. Put the client ID + secret in `.env` (copy from `.env.example`).
 
-If you'd rather skip OAuth entirely for local hacking, set `AUTH_MODE=off`
+If you'd rather skip OAuth entirely for local development, set `AUTH_MODE=off`
 and every tool becomes callable without a token.
 
 </details>

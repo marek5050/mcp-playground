@@ -1,14 +1,8 @@
 """Playground MCP server for mcpbuilders.dev.
 
-Anonymous read-only MarTech demo tools, plus per-user tools behind Google
-sign-in (OAuth client from the mcp-builders GCP project). AUTH_MODE controls
-the wiring:
-
-- mixed (default): anonymous tools work without a token; gated tools require
-  one. OAuth endpoints are mounted so Claude clients can authenticate.
-- required: every /mcp request needs a token — Claude auto-triggers the OAuth
-  flow on first connect (stock FastMCP enforcement).
-- off: no auth wiring at all (local dataset hacking).
+Every /mcp request needs a Google-issued token — Claude clients auto-trigger
+the OAuth flow on first connect (stock FastMCP enforcement). Set
+``AUTH_MODE=off`` for local dataset hacking without OAuth.
 """
 
 from __future__ import annotations
@@ -21,31 +15,26 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 
 from playground.config import Settings, load_settings
-from playground.middleware import (
-    ApiKeyAuthMiddleware,
-    OptionalAuthMiddleware,
-    RequireAuthenticatedUser,
-)
-from playground.tools import campaigns, gated, rag
+from playground.middleware import ApiKeyAuthMiddleware, RequireAuthenticatedUser
+from playground.tools import campaigns, rag
 
 GOOGLE_OAUTH_SCOPES = ["openid", "email"]
 
 INSTRUCTIONS = """\
 Public playground MCP server from mcpbuilders.dev. Two demos in one:
 
-1. Read-only MarTech dataset — top_creatives, spend_breakdown, list_campaigns
-   (anonymous), save_view + my_views (per-user Google OAuth).
+1. MarTech dataset — top_creatives, spend_breakdown, list_campaigns, plus
+   per-user save_view / my_views scoped to the caller's Google identity.
 2. Hybrid RAG over a public-domain Project Gutenberg corpus (Moby Dick, The
-   Adventures of Sherlock Holmes) — rag_query, list_documents, get_document.
-   Same stack as citrini_rag: Pinecone dense + BM25 sparse + RRF + Cohere
-   rerank. Anonymous.
+   Adventures of Sherlock Holmes, A Study in Scarlet, The Hound of the
+   Baskervilles) — rag_query, list_documents, get_document. Pinecone dense +
+   BM25 sparse + RRF + Cohere rerank.
 """
 
 
 def build_mcp(settings: Settings) -> FastMCP:
-    # We always wire auth externally in build_app so the API-key path stays
-    # independent of the OAuth provider's required_scopes. FastMCP's own auth=
-    # plumbing would install RequireAuthMiddleware with Google scopes baked in.
+    # Auth wired externally in build_app so the API-key path stays independent
+    # of the OAuth provider's required_scopes.
     mcp = FastMCP(
         "playground",
         instructions=INSTRUCTIONS,
@@ -60,7 +49,6 @@ def build_mcp(settings: Settings) -> FastMCP:
         ],
     )
     campaigns.register(mcp)
-    gated.register(mcp)
     rag.register(mcp, settings)
 
     @mcp.custom_route("/healthz", methods=["GET"], include_in_schema=False)
@@ -87,25 +75,15 @@ def build_app(settings: Settings | None = None) -> Starlette:
     api_key_mw = Middleware(ApiKeyAuthMiddleware, api_key=settings.api_key)
 
     if settings.auth_mode == "off":
-        # No auth wiring; API-key middleware still recognized for gated tools.
         return mcp.http_app(path="/mcp", middleware=[api_key_mw])
 
     provider = _google_provider(settings)
     resource_metadata_url = f"{settings.base_url}/.well-known/oauth-protected-resource/mcp"
-    middleware: list[Middleware] = [*provider.get_middleware(), api_key_mw]
-
-    if settings.auth_mode == "required":
-        # Custom require-auth: accepts any AuthenticatedUser (OAuth OR API key);
-        # no scope check, so the API-key path doesn't have to carry Google scopes.
-        middleware.append(
-            Middleware(RequireAuthenticatedUser, resource_metadata_url=resource_metadata_url)
-        )
-    else:
-        # mixed: anonymous allowed; 401 only when a Bearer token is presented
-        # but failed BOTH Google verification AND the API-key check.
-        middleware.append(
-            Middleware(OptionalAuthMiddleware, resource_metadata_url=resource_metadata_url)
-        )
+    middleware: list[Middleware] = [
+        *provider.get_middleware(),
+        api_key_mw,
+        Middleware(RequireAuthenticatedUser, resource_metadata_url=resource_metadata_url),
+    ]
 
     app = mcp.http_app(path="/mcp", middleware=middleware)
     # discovery docs + /register + /authorize + /token + /auth/callback

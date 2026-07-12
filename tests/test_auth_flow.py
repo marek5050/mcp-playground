@@ -1,8 +1,8 @@
-"""End-to-end tests of the mixed-mode auth wiring over real HTTP.
+"""End-to-end tests of the required-mode auth wiring over real HTTP.
 
 Spins up the actual ASGI app (uvicorn in a thread) with a stub Google provider
 whose verify_token accepts a known test token, then exercises discovery, DCR,
-anonymous access, gated-tool errors, and the authenticated path.
+the unauthenticated 401, and the authenticated path.
 """
 
 from __future__ import annotations
@@ -52,7 +52,7 @@ def base_url(monkeypatch_module):
     settings = Settings(
         base_url=base,
         port=port,
-        auth_mode="mixed",
+        auth_mode="required",
         google_oauth_client_id="dummy.apps.googleusercontent.com",
         google_oauth_client_secret="GOCSPX-dummy",
         api_key="ABCDEF",
@@ -120,6 +120,18 @@ def test_dynamic_client_registration(base_url):
     assert resp.json()["client_id"]
 
 
+def test_missing_bearer_gets_401_with_www_authenticate(base_url):
+    resp = httpx.post(
+        f"{base_url}/mcp",
+        headers={"Accept": "application/json, text/event-stream"},
+        json={"jsonrpc": "2.0", "method": "initialize", "id": 1, "params": {
+            "protocolVersion": "2025-06-18", "capabilities": {},
+            "clientInfo": {"name": "t", "version": "0"}}},
+    )
+    assert resp.status_code == 401
+    assert "resource_metadata" in resp.headers["www-authenticate"]
+
+
 def test_invalid_bearer_gets_401_with_www_authenticate(base_url):
     resp = httpx.post(
         f"{base_url}/mcp",
@@ -135,8 +147,11 @@ def test_invalid_bearer_gets_401_with_www_authenticate(base_url):
     assert "resource_metadata" in resp.headers["www-authenticate"]
 
 
-async def test_anonymous_can_list_and_call_open_tools(base_url):
-    async with Client(f"{base_url}/mcp") as client:
+async def test_authenticated_client_lists_and_calls_tools(base_url):
+    transport = StreamableHttpTransport(
+        f"{base_url}/mcp", headers={"Authorization": f"Bearer {TEST_TOKEN}"}
+    )
+    async with Client(transport) as client:
         tools = sorted(t.name for t in await client.list_tools())
         assert tools == [
             "get_document",
@@ -157,13 +172,7 @@ async def test_anonymous_can_list_and_call_open_tools(base_url):
         ]
 
 
-async def test_anonymous_gated_tool_returns_sign_in_help(base_url):
-    async with Client(f"{base_url}/mcp") as client:
-        with pytest.raises(Exception, match="Sign-in required"):
-            await client.call_tool("my_views", {})
-
-
-async def test_authenticated_gated_tools_scope_to_user(base_url):
+async def test_authenticated_saved_views_scope_to_user(base_url):
     transport = StreamableHttpTransport(
         f"{base_url}/mcp", headers={"Authorization": f"Bearer {TEST_TOKEN}"}
     )

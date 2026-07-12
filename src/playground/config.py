@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 
 load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
-AuthMode = Literal["mixed", "required", "off"]
+AuthMode = Literal["required", "off"]
 
 
 @dataclass(frozen=True)
@@ -37,9 +37,9 @@ class Settings:
 
 
 def load_settings() -> Settings:
-    auth_mode = os.environ.get("AUTH_MODE", "mixed").lower()
-    if auth_mode not in ("mixed", "required", "off"):
-        raise ValueError(f"AUTH_MODE must be mixed|required|off, got {auth_mode!r}")
+    auth_mode = os.environ.get("AUTH_MODE", "required").lower()
+    if auth_mode not in ("required", "off"):
+        raise ValueError(f"AUTH_MODE must be required|off, got {auth_mode!r}")
 
     settings = Settings(
         base_url=os.environ.get("BASE_URL", "http://localhost:8080").rstrip("/"),
