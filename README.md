@@ -87,7 +87,8 @@ flowchart LR
 - **Runtime**: query hits both retrievers in parallel, results fuse, Cohere
   reranks, top *k* chunks come back with `{doc_id, title, author, source_url}`.
 
-Read more about [Retrieval-Augmented Generation](https://www.pinecone.io/learn/retrieval-augmented-generation/).
+Read more about [Retrieval-Augmented Generation](https://www.pinecone.io/learn/retrieval-augmented-generation/)
+and [building a RAG agent with hybrid search](https://developer.nvidia.com/blog/build-a-rag-agent-with-nvidia-nemotron/).
 
 </details>
 
