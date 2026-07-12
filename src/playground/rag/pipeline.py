@@ -1,7 +1,7 @@
 """Hybrid RAG pipeline: Pinecone (dense) + BM25 (sparse) + RRF + Cohere rerank.
 
-Ported from citrini_rag/hybrid_rag.py, generalized to a plain-text corpus
-described by ``playground.data.corpus.manifest``. The pipeline has two modes:
+Runs over a plain-text corpus described by
+``playground.data.corpus.manifest``. The pipeline has two modes:
 
 - ``build_indexes()`` — offline, one-shot. Embeds every chunk to Pinecone and
   writes ``bm25_index.json`` next to the corpus. Run via
