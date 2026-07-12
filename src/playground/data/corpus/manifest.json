@@ -1,0 +1,36 @@
+{
+  "documents": [
+    {
+      "id": "moby-dick",
+      "title": "Moby Dick; Or, The Whale",
+      "author": "Herman Melville",
+      "filename": "moby-dick.txt",
+      "source_url": "https://www.gutenberg.org/ebooks/2701",
+      "gutenberg_id": 2701
+    },
+    {
+      "id": "sherlock-holmes",
+      "title": "The Adventures of Sherlock Holmes",
+      "author": "Arthur Conan Doyle",
+      "filename": "sherlock-holmes.txt",
+      "source_url": "https://www.gutenberg.org/ebooks/1661",
+      "gutenberg_id": 1661
+    },
+    {
+      "id": "study-in-scarlet",
+      "title": "A Study in Scarlet",
+      "author": "Arthur Conan Doyle",
+      "filename": "study-in-scarlet.txt",
+      "source_url": "https://www.gutenberg.org/ebooks/244",
+      "gutenberg_id": 244
+    },
+    {
+      "id": "hound-of-the-baskervilles",
+      "title": "The Hound of the Baskervilles",
+      "author": "Arthur Conan Doyle",
+      "filename": "hound-of-the-baskervilles.txt",
+      "source_url": "https://www.gutenberg.org/ebooks/2852",
+      "gutenberg_id": 2852
+    }
+  ]
+}

@@ -1,16 +1,25 @@
 [project]
 name = "mcp-playground"
 version = "0.1.0"
-description = "Public playground MCP server for mcpbuilders.dev — demo MarTech tools with optional per-user Google OAuth"
+description = "Public playground MCP server for mcpbuilders.dev — demo MarTech tools + hybrid RAG over public-domain books, with optional per-user Google OAuth"
 requires-python = ">=3.12"
 dependencies = [
     "fastmcp==3.2.4",
     "uvicorn>=0.30",
     "python-dotenv>=1.0",
+    # Hybrid RAG stack (Pinecone dense + BM25 sparse + Cohere rerank)
+    "langchain-core>=0.3",
+    "langchain-google-genai>=2.0",
+    "langchain-pinecone>=0.2",
+    "langchain-cohere>=0.3",
+    "pinecone>=5.0",
+    "rank-bm25>=0.2.2",
+    "numpy>=1.26",
 ]
 
 [project.scripts]
 playground = "playground.server:main"
+playground-rag-build = "playground.rag.build:main"
 
 [dependency-groups]
 dev = [
