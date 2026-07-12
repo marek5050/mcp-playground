@@ -12,8 +12,9 @@ on first use, and after that every tool call is scoped to *you*.
 ## Quickstart
 
 ```bash
-claude mcp add --transport http playground https://playground.mcpbuilders.dev/mcp
-hermes mcp add playground --url https://playground.mcpbuilders.dev/mcp --auth oauth
+$ claude mcp add --transport http playground https://playground.mcpbuilders.dev/mcp
+
+$ hermes mcp add playground --url https://playground.mcpbuilders.dev/mcp --auth oauth
 ```
 
 The first tool call triggers a browser tab to sign in with Google. Approve
@@ -21,7 +22,7 @@ it once, then try:
 
 - *"What are the top creatives by ROAS this month?"* — campaigns dataset.
 - *"Search the Sherlock Holmes stories for a scene with a bicycle."* — hybrid RAG over public-domain text.
-- *"Which stories take place in Utah?" - another example of hybrid RAG
+- *"Which stories take place in Utah?"* - another example of hybrid RAG
 
 Same server, one sign-in, everything scoped to your identity. That's the
 goal.
@@ -202,17 +203,7 @@ the MCP server then enforces its own Bearer-token check via
 **`--max-instances 1` is load-bearing.** OAuth client registrations and
 saved views live in memory / on disk per instance. A restart silently makes
 MCP clients re-register and re-authenticate (standard 401 semantics), and
-saved views get forgotten. Fine for a playground. The upgrade path is
-passing a persistent `client_storage` (any `AsyncKeyValue` backend) to
-`GoogleProvider` and moving `VIEWS` to a real datastore.
-
-## Known limitations
-
-- `fastmcp` is pinned to `3.2.4`. The auth wiring relies on
-  `provider.get_middleware()` / `get_routes()` / `http_app(middleware=...)` —
-  re-verify these before upgrading.
-- The mcpbuilders.dev site shows tools as `campaigns.top_creatives`; the
-  actual MCP tool names have no `campaigns.` prefix (MCP tool-name charset).
+saved views get forgotten.
 
 ## License
 
