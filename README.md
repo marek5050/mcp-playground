@@ -1,11 +1,13 @@
 # MCP Playground
 
-A public MCP server you can point your agent at in 30 seconds — the one behind
-[mcpbuilders.dev](https://mcpbuilders.dev). It's a live demo of two things I
-kept getting asked about: **per-user OAuth on an MCP server**, and a
+A public MCP server you can point your agent at in under a minute — the one
+behind [mcpbuilders.dev](https://mcpbuilders.dev). It's a live demo of two
+things I kept getting asked about: **per-user OAuth on an MCP server**, and a
 **hybrid-RAG pipeline** you can actually query.
 
-No sign-up. No API keys. Just add it and go.
+The deployed server is authenticated with Google Authentication — every call needs a Google
+sign-in. Add the server, your MCP client will pop the Google consent screen
+on first use, and after that every tool call is scoped to *you*.
 
 ## Quickstart
 
@@ -13,27 +15,30 @@ No sign-up. No API keys. Just add it and go.
 claude mcp add --transport http playground https://playground.mcpbuilders.dev/mcp
 ```
 
-Then try:
+The first tool call triggers a browser tab to sign in with Google. Approve
+it once, then try:
 
-- *"What are the top creatives by ROAS this month?"* — hits the campaigns dataset, no auth.
-- *"Search the Sherlock Holmes stories for a scene with a bicycle."* — hits the RAG pipeline, no auth.
-- *"Save that as a view called 'bike-scenes'."* — prompts you to sign in with Google, then saves it under your identity.
+- *"What are the top creatives by ROAS this month?"* — campaigns dataset.
+- *"Search the Sherlock Holmes stories for a scene with a bicycle."* — hybrid RAG over public-domain text.
+- *"Which stories take place in Utah?" - another example of hybrid RAG
 
-That last one is the point of the whole thing: some tools are public, some
-are scoped to *your* Google identity, all on the same server.
+Same server, one sign-in, everything scoped to your identity. That's the
+goal.
 
 ## Why this exists
 
 Most MCP examples show one of two things: an anonymous read-only server, or
-a fully-locked-down one. Real products live in the middle — some tools you
-want anyone to try, some tools have to know who's calling. This repo is a
-worked example of that middle case, wired end-to-end with Google OAuth.
+a fully-locked-down internal one. What people actually want to ship is
+somewhere in between — real product tools, backed by a real identity. This
+repo is an end-to-end example: Google
+OAuth on an MCP server, saved state scoped to the caller, deployed on
+Cloud Run.
 
 The RAG demo is here because "hybrid retrieval" gets talked about a lot but
-rarely shown as a runnable thing. Point your agent at it and ask questions
-of *The Adventures of Sherlock Holmes*, *A Study in Scarlet*, or
-*The Hound of the Baskervilles* — a Pinecone-dense + BM25-sparse + Reciprocal
-Rank Fusion + Cohere rerank pipeline over public-domain text.
+rarely shown as a runnable feature. Point your agent at it and ask questions
+of *The Adventures of Sherlock Holmes*, *A Study in Scarlet*, or *The Hound
+of the Baskervilles* — a Pinecone-dense + BM25-sparse + Reciprocal Rank
+Fusion + Cohere rerank pipeline over public-domain text.
 
 Two demos, one server, both live.
 
@@ -41,7 +46,7 @@ Two demos, one server, both live.
 
 ```mermaid
 flowchart LR
-    Client[MCP Client] -->|HTTPS| Server[Playground Server]
+    Client[MCP Client] -->|HTTPS + Bearer token| Server[Playground Server]
     Server --> Campaigns[Campaigns Dataset]
     Server --> RAG[Hybrid RAG]
     Server -. sign-in .-> Google[Google OAuth]
@@ -49,20 +54,17 @@ flowchart LR
     RAG --> Cohere
 ```
 
-| Tool | Auth | What it does |
-|---|---|---|
-| `top_creatives` | anonymous | Creatives ranked by ROAS over 7d/30d/90d |
-| `spend_breakdown` | anonymous | Spend/revenue by channel, campaign, or creative type |
-| `list_campaigns` | anonymous | All campaigns with creatives and 90d totals |
-| `rag_query` | anonymous | Hybrid retrieval over the Gutenberg corpus |
-| `list_documents` | anonymous | Corpus manifest — titles, authors, source URLs |
-| `get_document` | anonymous | Full text of one book by id |
-| `save_view` | **Google sign-in** | Save a named query view, scoped to your identity |
-| `my_views` | **Google sign-in** | List only the caller's saved views |
+| Tool | What it does |
+|---|---|
+| `top_creatives` | Creatives ranked by ROAS over 7d/30d/90d |
+| `spend_breakdown` | Spend/revenue by channel, campaign, or creative type |
+| `list_campaigns` | All campaigns with creatives and 90d totals |
+| `rag_query` | Hybrid retrieval over the Gutenberg corpus |
+| `list_documents` | Corpus manifest — titles, authors, source URLs |
+| `get_document` | Full text of one book by id |
 
-The gated tools stay visible in `tools/list` even when you're anonymous — call
-them without a token and you get sign-in instructions back, not a "tool not
-found" error. It's a small thing but it's how discovery is supposed to feel.
+Every tool requires a valid Google token in production. Local dev can flip
+this — see below.
 
 Deeper architecture writeup is in [docs/architecture.md](docs/architecture.md).
 
@@ -78,6 +80,11 @@ authorization spec — discovery, dynamic client registration, PKCE, the whole
 callback dance. No custom auth server code lives in this repo. Users sign in
 on Google's own consent screen.
 
+The server is mounted as `FastMCP(auth=provider)`, so every request must
+carry a Bearer token. MCP clients like Claude Desktop/Code see the `401 +
+WWW-Authenticate` on their first call and automatically start the OAuth
+dance — the user only sees "sign in with Google" pop up in the browser.
+
 </details>
 
 <details>
@@ -85,25 +92,15 @@ on Google's own consent screen.
 
 Set in [server.py](src/playground/server.py). Three settings:
 
-- **`mixed`** *(default here)* — anonymous tools work without a token. When a
-  token *is* presented, it's verified;
+- **`required`** — *(what production runs)* stock `FastMCP(auth=...)`
+  enforcement. Every request needs a token. Claude Desktop/Code auto-trigger
+  the Google sign-in flow on first connect.
+- **`mixed`** — anonymous tools work without a token; gated tools return
+  sign-in instructions.
   [`OptionalAuthMiddleware`](src/playground/middleware.py) returns
-  `401 + WWW-Authenticate` on invalid tokens so clients know to
-  re-authenticate.
-- **`required`** — stock `FastMCP(auth=...)` enforcement. Every request needs
-  a token, so Claude Desktop/Code auto-trigger the Google sign-in flow on
-  first connect. Best "wow" demo of the OAuth flow.
+  `401 + WWW-Authenticate` only for *invalid* tokens so clients know to
+  re-authenticate. Useful if you want a public-read/private-write split.
 - **`off`** — no auth wiring. For local dataset hacking.
-
-</details>
-
-<details>
-<summary>Gotcha: Claude clients only auto-start OAuth on a 401</summary>
-
-Which means in `mixed` mode, sign-in is manual. In Claude Code run `/mcp`,
-pick the server, choose **Authenticate**. In Claude Desktop, connect it under
-Settings → Connectors. The gated tools' error message walks users through
-this.
 
 </details>
 
@@ -136,7 +133,7 @@ In any GCP project of your own:
 3. Put the client ID + secret in `.env` (copy from `.env.example`).
 
 If you'd rather skip OAuth entirely for local hacking, set `AUTH_MODE=off`
-and the gated tools become open too.
+and every tool becomes callable without a token.
 
 </details>
 
@@ -177,25 +174,29 @@ uv run pytest
 ```
 
 `tests/test_auth_flow.py` boots the real ASGI app and walks the whole flow —
-discovery, dynamic client registration, anonymous access, the gated-tool
-error, and the authenticated path (with a stubbed token verifier, so no live
-Google needed).
+discovery, dynamic client registration, the unauthenticated 401, and the
+authenticated path (with a stubbed token verifier, so no live Google
+needed).
 
 The campaigns dataset is generated by `python -m playground.data.generate`;
 the last-7-days totals reproduce the numbers on mcpbuilders.dev exactly.
 
 ## Deploying (Cloud Run)
 
-Deploying your own copy is one command once you have a GCP project and an
-OAuth client:
+The production deploy looks like this — swap in your own project, domain,
+and OAuth client:
 
 ```bash
 gcloud run deploy mcp-playground --source . \
   --region us-central1 --allow-unauthenticated \
   --min-instances 0 --max-instances 1 \
-  --set-env-vars BASE_URL=https://your.domain,AUTH_MODE=mixed,GOOGLE_OAUTH_CLIENT_ID=... \
+  --set-env-vars BASE_URL=https://your.domain,AUTH_MODE=required,GOOGLE_OAUTH_CLIENT_ID=... \
   --set-secrets GOOGLE_OAUTH_CLIENT_SECRET=your-secret-name:latest
 ```
+
+`--allow-unauthenticated` here means Cloud Run itself accepts the request —
+the MCP server then enforces its own Bearer-token check via
+`AUTH_MODE=required`.
 
 **`--max-instances 1` is load-bearing.** OAuth client registrations and
 saved views live in memory / on disk per instance. A restart silently makes
@@ -206,7 +207,7 @@ passing a persistent `client_storage` (any `AsyncKeyValue` backend) to
 
 ## Known limitations
 
-- `fastmcp` is pinned to `3.2.4`. The mixed-mode wiring relies on
+- `fastmcp` is pinned to `3.2.4`. The auth wiring relies on
   `provider.get_middleware()` / `get_routes()` / `http_app(middleware=...)` —
   re-verify these before upgrading.
 - The mcpbuilders.dev site shows tools as `campaigns.top_creatives`; the
