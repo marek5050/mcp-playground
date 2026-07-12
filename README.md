@@ -68,7 +68,44 @@ flowchart LR
 Every tool requires a valid Google token in production. Local dev can flip
 this — see below.
 
-Deeper architecture writeup is in [docs/architecture.md](docs/architecture.md).
+<details>
+<summary>Hybrid RAG pipeline</summary>
+
+```mermaid
+flowchart LR
+    Query --> Dense[Pinecone dense]
+    Query --> Sparse[BM25 sparse]
+    Dense --> Fuse[Rank fusion]
+    Sparse --> Fuse
+    Fuse --> Rerank[Cohere rerank]
+    Rerank --> Top[Top-k chunks]
+```
+
+- **Offline** (`playground-rag-build`): chunk the corpus, embed to Pinecone,
+  write `bm25_index.json` next to the corpus. The BM25 file is committed so
+  the deployed image serves queries without needing API keys at build time.
+- **Runtime**: query hits both retrievers in parallel, results fuse, Cohere
+  reranks, top *k* chunks come back with `{doc_id, title, author, source_url}`.
+
+Read more about [Retrieval-Augmented Generation](https://www.pinecone.io/learn/retrieval-augmented-generation/).
+
+</details>
+
+<details>
+<summary>Storage</summary>
+
+| Store | Backend | Lifetime |
+|---|---|---|
+| Campaigns dataset | in-memory | process |
+| Saved views | in-memory dict | process |
+| OAuth registrations / tokens | in-memory | process |
+| Corpus + BM25 index | on-disk (in image) | image |
+| Dense vectors | Pinecone (remote) | account |
+
+Restart = clients re-register and re-authenticate, saved views forgotten.
+Acceptable for a playground.
+
+</details>
 
 ## How auth works
 
@@ -86,6 +123,8 @@ The server is mounted as `FastMCP(auth=provider)`, so every request must
 carry a Bearer token. MCP clients like Claude Desktop/Code see the `401 +
 WWW-Authenticate` on their first call and automatically start the OAuth
 dance — the user only sees "sign in with Google" pop up in the browser.
+
+Read more about [OAuth in FastMCP](https://gofastmcp.com/clients/auth/oauth).
 
 </details>
 
