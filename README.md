@@ -13,6 +13,7 @@ on first use, and after that every tool call is scoped to *you*.
 
 ```bash
 claude mcp add --transport http playground https://playground.mcpbuilders.dev/mcp
+hermes mcp add playground --url https://playground.mcpbuilders.dev/mcp --auth oauth
 ```
 
 The first tool call triggers a browser tab to sign in with Google. Approve
